@@ -3,7 +3,7 @@ pkgdown: 2.0.0
 pkgdown_sha: ~
 articles:
   hello_world: hello_world.html
-last_built: 2021-12-01T10:30Z
+last_built: 2021-12-01T10:51Z
 urls:
   reference: https://taxonomicallyinformedannotation.github.io/tima-r/reference
   article: https://taxonomicallyinformedannotation.github.io/tima-r/articles
