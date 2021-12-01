@@ -49,9 +49,6 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/chemical_weighting.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/clean_gnverifier.html</loc>
-  </url>
-  <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/dist_get.html</loc>
   </url>
   <url>
@@ -79,9 +76,6 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/log_debug.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/manipulating_taxo_otl.html</loc>
-  </url>
-  <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/ms1_annotation.html</loc>
   </url>
   <url>
@@ -101,9 +95,6 @@
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/plot_histograms.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/preclean_gnverifier.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_hierarchy.html</loc>
