@@ -48,6 +48,7 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="articles/1.html">1 Preparing your structure-organism pairs library</a>
     <a class="dropdown-item" href="articles/hello_world.html">Vignette Title</a>
   </div>
 </li>
@@ -101,22 +102,12 @@
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>As the package is not (yet) available on CRAN, you will need to install the development version, therefore:</p>
-<pre class="shell"><code>bash install_package.sh</code></pre>
+<pre class="shell"><code>Rscript -e 'if(!requireNamespace("remotes")){install.packages("remotes")}
+remotes::install_github("taxonomicallyinformedannotation/tima-r")'</code></pre>
 <p>or in R directly:</p>
 <pre class="shell"><code><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"remotes"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>
     <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"taxonomicallyinformedannotation/tima-r"</span><span class="op">)</span></code></pre>
-<div class="section level3">
-<h3 id="windows-notice">Windows Notice<a class="anchor" aria-label="anchor" href="#windows-notice"></a>
-</h3>
-<p>If you are using Windows, you will need to install <a href="https://chocolatey.org/install" class="external-link">Choco</a>.</p>
-<p>Then run:</p>
-<pre class="shell"><code>choco install curl
-choco install gzip
-choco install unzip
-choco install wget</code></pre>
-<p>Please also follow the procedure described <a href="https://stackoverflow.com/questions/2517190/how-do-i-force-git-to-use-lf-instead-of-crlf-under-windows/13154031#13154031" class="external-link">here</a> to ensure files will be proberly encoded.</p>
-</div>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"taxonomicallyinformedannotation/tima-r"</span><span class="op">)</span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="use">Use<a class="anchor" aria-label="anchor" href="#use"></a>
@@ -130,11 +121,11 @@ cp -R config/default config/params</code></pre>
 <div class="section level3">
 <h3 id="structure-organism-pairs-library">Structure-organism pairs library<a class="anchor" aria-label="anchor" href="#structure-organism-pairs-library"></a>
 </h3>
-<pre class="shell"><code>bash inst/scripts/get_lotus.sh &amp;&amp; 
-Rscript inst/scripts/prepare_lotus.R &amp;&amp;
-# Rscript inst/scripts/prepare_closed.R &amp;&amp; # only if you have access to it
-Rscript inst/scripts/prepare_library.R &amp;&amp;
-Rscript inst/scripts/prepare_adducts.R &amp;&amp;</code></pre>
+<pre class="shell"><code>Rscript inst/scripts/get_lotus.R
+Rscript inst/scripts/prepare_lotus.R
+# Rscript inst/scripts/prepare_closed.R # only if you have access to it
+Rscript inst/scripts/prepare_library.R
+Rscript inst/scripts/prepare_adducts.R</code></pre>
 </div>
 <div class="section level3">
 <h3 id="annotations">Annotations<a class="anchor" aria-label="anchor" href="#annotations"></a>
@@ -142,32 +133,31 @@ Rscript inst/scripts/prepare_adducts.R &amp;&amp;</code></pre>
 <div class="section level4">
 <h4 id="get-ms2-annotations">Get MS2 annotations<a class="anchor" aria-label="anchor" href="#get-ms2-annotations"></a>
 </h4>
-<pre class="shell"><code># (spectral-lib-matcher, which is only in python. see related repo)
+<pre class="shell"><code># (spectral_lib_matcher, which is only in python. see related repo)
 # instead we provide an example file coming from the new ISDB.
 # It also works with annotations coming from GNPS (see next steps)
-bash inst/scripts/get_example_isdb.sh</code></pre>
+Rscript inst/scripts/get_example_isdb.R</code></pre>
 </div>
 <div class="section level4">
 <h4 id="format-ms2-annotations">Format MS2 annotations<a class="anchor" aria-label="anchor" href="#format-ms2-annotations"></a>
 </h4>
 <pre class="shell"><code># depending on the annotation tool you used
-
-Rscript inst/scripts/prepare_gnps.R &amp;&amp; # optional
-Rscript inst/scripts/prepare_sirius.R &amp;&amp; # optional
-Rscript inst/scripts/prepare_isdb.R &amp;&amp;</code></pre>
+Rscript inst/scripts/prepare_gnps.R # optional
+Rscript inst/scripts/prepare_sirius.R # optional
+Rscript inst/scripts/prepare_isdb.R</code></pre>
 </div>
 <div class="section level4">
 <h4 id="complement-ms2-annotations-with-spectral-clusters-and-chemical-taxonomy-of-annotations">Complement MS2 annotations (with spectral clusters and chemical taxonomy of annotations)<a class="anchor" aria-label="anchor" href="#complement-ms2-annotations-with-spectral-clusters-and-chemical-taxonomy-of-annotations"></a>
 </h4>
-<pre class="shell"><code>Rscript inst/scripts/prepare_edges.R &amp;&amp; 
-Rscript inst/scripts/prepare_features_components.R &amp;&amp;
-Rscript inst/scripts/prepare_features_classification.R &amp;&amp;</code></pre>
+<pre class="shell"><code>Rscript inst/scripts/prepare_edges.R
+Rscript inst/scripts/prepare_features_components.R
+Rscript inst/scripts/prepare_features_classification.R</code></pre>
 </div>
 <div class="section level4">
 <h4 id="get-biological-taxonomy-information">Get biological taxonomy information<a class="anchor" aria-label="anchor" href="#get-biological-taxonomy-information"></a>
 </h4>
-<pre class="shell"><code>bash inst/scripts/get_gnverifier.sh &amp;&amp; 
-Rscript inst/scripts/prepare_taxa.R </code></pre>
+<pre class="shell"><code>bash inst/scripts/get_gnverifier.sh
+Rscript inst/scripts/prepare_taxa.R</code></pre>
 </div>
 </div>
 <div class="section level3">
