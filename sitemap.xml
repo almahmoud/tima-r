@@ -34,105 +34,21 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/news/index.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/biological_cleaning.html</loc>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/get_example_isdb.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/biological_weighting.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/chemical_cleaning.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/chemical_decoration.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/chemical_weighting.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/dist_get.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/dist_groups.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/export_params.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/form_adducts_neg.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/form_adducts_pos.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/get_params.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/homemadeShift.html</loc>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/get_lotus.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/log_debug.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/ms1_annotation.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/ms1_decoration.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/non_ms1_annotation.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/parse_cli_params.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/parse_yaml_params.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/parse_yaml_paths.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/plot_histograms.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_hierarchy.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_hierarchy_2.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_plot.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/read_clusters.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/read_edges.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/read_features.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/read_metadata.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/read_nap.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/read_results.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/taxo_decoration.html</loc>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_adducts.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/tidyeval.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/timaR-package.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/y_as_na.html</loc>
   </url>
 </urlset>
