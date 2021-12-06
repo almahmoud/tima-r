@@ -16,10 +16,16 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/SUPPORT.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/articles/0.html</loc>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/articles/0_intro.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/articles/1.html</loc>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/articles/1_library.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/articles/2_formatting.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/articles/3_processing.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/articles/index.html</loc>
