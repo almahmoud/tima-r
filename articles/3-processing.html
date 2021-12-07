@@ -95,17 +95,17 @@
 <p>Before running the corresponding code, do not forget to modify <code>config/params/process_annotations.yaml</code>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/process_annotations.R"</span><span class="op">)</span>
-<span class="co">#&gt; 2021-12-07 09:43:55 This script performs <span style="color: #00BB00;">taxonomically informed scoring</span> preceded by <span style="color: #0000BB;">MS1 annotation</span> and folowed by <span style="color: #BBBB00;">chemical consistency informed scoring</span> </span>
-<span class="co">#&gt; 2021-12-07 09:43:55 Authors:  <span style="color: #00BB00;">AR</span> , <span style="color: #0000BB;">PMA</span> </span>
+<span class="co">#&gt; 2021-12-07 09:58:28 This script performs <span style="color: #00BB00;">taxonomically informed scoring</span> preceded by <span style="color: #0000BB;">MS1 annotation</span> and followed by <span style="color: #BBBB00;">chemical consistency informed scoring</span> </span>
+<span class="co">#&gt; 2021-12-07 09:58:28 Authors:  <span style="color: #00BB00;">AR</span> , <span style="color: #0000BB;">PMA</span> </span>
 <span class="co">#&gt;  </span>
-<span class="co">#&gt; 2021-12-07 09:43:55 Contributors: ... </span>
-<span class="co">#&gt; 2021-12-07 09:43:55 Loading paths </span>
-<span class="co">#&gt; 2021-12-07 09:43:55 Loading yaml parameters </span>
-<span class="co">#&gt; 2021-12-07 09:43:55 Loading command line arguments </span>
-<span class="co">#&gt; 2021-12-07 09:43:55 ... files ... </span>
-<span class="co">#&gt; 2021-12-07 09:43:55 ... metadata_table_spectral_annotation </span>
-<span class="co">#&gt; 2021-12-07 09:43:56 ... metadata_table_biological_annotation </span>
-<span class="co">#&gt; 2021-12-07 09:43:56 ... edges table</span>
+<span class="co">#&gt; 2021-12-07 09:58:28 Contributors: ... </span>
+<span class="co">#&gt; 2021-12-07 09:58:28 Loading paths </span>
+<span class="co">#&gt; 2021-12-07 09:58:28 Loading yaml parameters </span>
+<span class="co">#&gt; 2021-12-07 09:58:28 Loading command line arguments </span>
+<span class="co">#&gt; 2021-12-07 09:58:28 ... files ... </span>
+<span class="co">#&gt; 2021-12-07 09:58:28 ... metadata_table_spectral_annotation </span>
+<span class="co">#&gt; 2021-12-07 09:58:29 ... metadata_table_biological_annotation </span>
+<span class="co">#&gt; 2021-12-07 09:58:29 ... edges table</span>
 <span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">5464</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">2</span></span>
 <span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
 <span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span>
@@ -113,8 +113,8 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use <span style="color: #262626; background-color: #DADADA;">`spec()`</span> to retrieve the full column specification for this data.</span>
 <span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set <span style="color: #262626; background-color: #DADADA;">`show_col_types = FALSE`</span> to quiet this message.</span>
-<span class="co">#&gt; 2021-12-07 09:43:56 ... structure-organism pairs table </span>
-<span class="co">#&gt; 2021-12-07 09:44:00 ... single charge adducts table</span>
+<span class="co">#&gt; 2021-12-07 09:58:29 ... structure-organism pairs table </span>
+<span class="co">#&gt; 2021-12-07 09:58:33 ... single charge adducts table</span>
 <span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">13</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">2</span></span>
 <span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
 <span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span>
@@ -123,7 +123,7 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use <span style="color: #262626; background-color: #DADADA;">`spec()`</span> to retrieve the full column specification for this data.</span>
 <span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set <span style="color: #262626; background-color: #DADADA;">`show_col_types = FALSE`</span> to quiet this message.</span>
-<span class="co">#&gt; 2021-12-07 09:44:00 ... adducts masses for in source dimers and multicharged</span>
+<span class="co">#&gt; 2021-12-07 09:58:33 ... adducts masses for in source dimers and multicharged</span>
 <span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">15</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">2</span></span>
 <span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
 <span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span>
@@ -132,7 +132,7 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use <span style="color: #262626; background-color: #DADADA;">`spec()`</span> to retrieve the full column specification for this data.</span>
 <span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set <span style="color: #262626; background-color: #DADADA;">`show_col_types = FALSE`</span> to quiet this message.</span>
-<span class="co">#&gt; 2021-12-07 09:44:00 ... neutral lossses</span>
+<span class="co">#&gt; 2021-12-07 09:58:33 ... neutral lossses</span>
 <span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">68</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">2</span></span>
 <span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
 <span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span>
@@ -141,7 +141,7 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use <span style="color: #262626; background-color: #DADADA;">`spec()`</span> to retrieve the full column specification for this data.</span>
 <span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set <span style="color: #262626; background-color: #DADADA;">`show_col_types = FALSE`</span> to quiet this message.</span>
-<span class="co">#&gt; 2021-12-07 09:44:00 ... exact masses for MS1 annotation</span>
+<span class="co">#&gt; 2021-12-07 09:58:33 ... exact masses for MS1 annotation</span>
 <span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">935425</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">3</span></span>
 <span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
 <span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span>
@@ -150,7 +150,7 @@
 <span class="co">#&gt; </span>
 <span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use <span style="color: #262626; background-color: #DADADA;">`spec()`</span> to retrieve the full column specification for this data.</span>
 <span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set <span style="color: #262626; background-color: #DADADA;">`show_col_types = FALSE`</span> to quiet this message.</span>
-<span class="co">#&gt; 2021-12-07 09:44:01 performing MS1 annotation </span>
+<span class="co">#&gt; 2021-12-07 09:58:34 performing MS1 annotation </span>
 <span class="co">#&gt; filtering desired adducts and adding mz tolerance </span>
 <span class="co">#&gt; setting to data.table format for faster performance </span>
 <span class="co">#&gt; adding rt tolerance ... </span>
@@ -192,10 +192,10 @@
 <span class="co">#&gt;  <span style="color: #00BB00;">963116</span> <span style="color: #00BB00;">annotations</span> , on </span>
 <span class="co">#&gt;  <span style="color: #0000BB;">7129</span> <span style="color: #0000BB;">features</span> , of which </span>
 <span class="co">#&gt;  <span style="color: #BBBB00;">5482</span> were <span style="color: #BBBB00;">not previously annotated. </span></span>
-<span class="co"><span style="color: #BBBB00;">#&gt; </span>2021-12-07 09:44:17 adding biological organism metadata</span>
+<span class="co"><span style="color: #BBBB00;">#&gt; </span>2021-12-07 09:58:51 adding biological organism metadata</span>
 <span class="co">#&gt; Joining, by = "feature_id"</span>
 <span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D", "structure_taxonomy_npclassifier_01pathway", "structure_taxonomy_npclassifier_02superclass", "structure_taxonomy_npclassifier_03class")</span>
-<span class="co">#&gt; 2021-12-07 09:44:18 performing taxonomically informed scoring </span>
+<span class="co">#&gt; 2021-12-07 09:58:51 performing taxonomically informed scoring </span>
 <span class="co">#&gt; normalizing initial score </span>
 <span class="co">#&gt; selecting DB columns </span>
 <span class="co">#&gt; keeping distinct candidates per taxonomical rank </span>
@@ -262,7 +262,7 @@
 <span class="co">#&gt;  <span style="color: #BBBB00;">7026</span> annotations reranked at the <span style="color: #BBBB00;">genus</span> level, </span>
 <span class="co">#&gt;  <span style="color: #00BB00;">1948</span> annotations reranked at the <span style="color: #00BB00;">species</span> level, </span>
 <span class="co">#&gt;  and <span style="color: #BB0000;">0</span> annotations reranked at the <span style="color: #BB0000;">variety</span> level. </span>
-<span class="co">#&gt; 2021-12-07 09:44:56 cleaning taxonomically informed results and preparing for chemically informed scoring </span>
+<span class="co">#&gt; 2021-12-07 09:59:29 cleaning taxonomically informed results and preparing for chemically informed scoring </span>
 <span class="co">#&gt; keeping only MS1 candidates with minimum </span>
 <span class="co">#&gt;  0.5  biological score </span>
 <span class="co">#&gt; erasing other MS1 candidates</span>
@@ -280,7 +280,7 @@
 <span class="co">#&gt; joining all except -1 together </span>
 <span class="co">#&gt; adding dummy consistency for features with less than 2 neighbors </span>
 <span class="co">#&gt; binding results together </span>
-<span class="co">#&gt; 2021-12-07 09:45:00 performing chemically informed scoring </span>
+<span class="co">#&gt; 2021-12-07 09:59:34 performing chemically informed scoring </span>
 <span class="co">#&gt; calculating chemical score ... </span>
 <span class="co">#&gt; ... adding metadata </span>
 <span class="co">#&gt; ... pathway </span>
@@ -294,7 +294,7 @@
 <span class="co">#&gt;  <span style="color: #0000BB;">15421</span> annotations reranked at the <span style="color: #0000BB;">pathway</span> level, </span>
 <span class="co">#&gt;  <span style="color: #BBBB00;">11255</span> annotations reranked at the <span style="color: #BBBB00;">superclass</span> level, and </span>
 <span class="co">#&gt;  <span style="color: #00BB00;">3106</span> annotations reranked at the <span style="color: #00BB00;">class</span> level. </span>
-<span class="co">#&gt; 2021-12-07 09:45:04 cleaning for cytoscape export </span>
+<span class="co">#&gt; 2021-12-07 09:59:38 cleaning for cytoscape export </span>
 <span class="co">#&gt; filtering top  3  candidates and keeping only MS1 candidates with minimum </span>
 <span class="co">#&gt;  0.5  biological score or </span>
 <span class="co">#&gt;  0.666 chemical score </span>
@@ -307,10 +307,10 @@
 <span class="co">#&gt; Joining, by = c("feature_id", "best_candidate_organism", "reference_doi")</span>
 <span class="co">#&gt; Joining, by = "feature_id"</span>
 <span class="co">#&gt; Joining, by = c("feature_id", "component_id")</span>
-<span class="co">#&gt; 2021-12-07 09:45:19 Exporting ... </span>
-<span class="co">#&gt; 2021-12-07 09:45:19 ... path to export is <span style="color: #00BB00;">inst/extdata/processed/211207_094519/FinalResults.tsv</span> </span>
-<span class="co">#&gt; 2021-12-07 09:45:20 ... path to used parameters is <span style="color: #00BB00;">inst/extdata/processed/211207_094519/process_annotations.yaml</span> </span>
-<span class="co">#&gt; 2021-12-07 09:45:20 Script finished in <span style="color: #00BB00;">1.412021 mins</span></span></code></pre></div>
+<span class="co">#&gt; 2021-12-07 09:59:53 Exporting ... </span>
+<span class="co">#&gt; 2021-12-07 09:59:53 ... path to export is <span style="color: #00BB00;">inst/extdata/processed/211207_095953/FinalResults.tsv</span> </span>
+<span class="co">#&gt; 2021-12-07 09:59:53 ... path to used parameters is <span style="color: #00BB00;">inst/extdata/processed/211207_095953/process_annotations.yaml</span> </span>
+<span class="co">#&gt; 2021-12-07 09:59:53 Script finished in <span style="color: #00BB00;">1.421395 mins</span></span></code></pre></div>
 <p>The final exported file is formatted in order to be easily imported in <a href="https://cytoscape.org/" class="external-link">Cytoscape</a> to further explore your data!</p>
 <p>We hope you enjoyed using <strong>TIMA</strong> and are pleased to hear from you!</p>
 <p>For any remark or suggestion, please <a href="https://github.com/taxonomicallyinformedannotation/tima-r/issues" class="external-link">fill an issue</a> or feel free to contact us directly.</p>
