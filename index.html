@@ -120,7 +120,7 @@ remotes::install_github('taxonomicallyinformedannotation/tima-r')"</code></pre>
 <pre class="shell"><code>git clone https://github.com/taxonomicallyinformedannotation/tima-r.git
 cd tima-r</code></pre>
 <p>Then, copy the defaut parameters:</p>
-<pre class="shell"><code>cp -R config/default config/params</code></pre>
+<pre class="shell"><code>rsync -a --delete config/default/ config/params</code></pre>
 <p>Once done, you can start with an example using:</p>
 <pre class="shell"><code>Rscript inst/scripts/tima.R</code></pre>
 </div>
