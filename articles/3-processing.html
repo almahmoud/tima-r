@@ -38,7 +38,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">timaR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.2.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -104,23 +104,23 @@
 <p>Before running the corresponding code, do not forget to modify <code>config/params/process_annotations.yaml</code>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/process_annotations.R"</span><span class="op">)</span>
-<span class="co">#&gt; 2022-01-24 14:45:47 This script performs <span style="color: #00BB00;">taxonomically informed scoring</span> preceded by <span style="color: #0000BB;">MS1 annotation</span> and followed by <span style="color: #BBBB00;">chemical consistency informed scoring</span> </span>
-<span class="co">#&gt; 2022-01-24 14:45:47 Authors:  <span style="color: #00BB00;">AR</span> , <span style="color: #0000BB;">PMA</span> </span>
+<span class="co">#&gt; 2022-01-24 14:59:45 This script performs <span style="color: #00BB00;">taxonomically informed scoring</span> preceded by <span style="color: #0000BB;">MS1 annotation</span> and followed by <span style="color: #BBBB00;">chemical consistency informed scoring</span> </span>
+<span class="co">#&gt; 2022-01-24 14:59:45 Authors:  <span style="color: #00BB00;">AR</span> , <span style="color: #0000BB;">PMA</span> </span>
 <span class="co">#&gt;  </span>
-<span class="co">#&gt; 2022-01-24 14:45:47 Contributors: ... </span>
-<span class="co">#&gt; 2022-01-24 14:45:47 Loading paths </span>
-<span class="co">#&gt; 2022-01-24 14:45:47 Loading yaml parameters </span>
-<span class="co">#&gt; 2022-01-24 14:45:47 Loading command line arguments </span>
-<span class="co">#&gt; 2022-01-24 14:45:47 ... files ... </span>
-<span class="co">#&gt; 2022-01-24 14:45:47 ... metadata_table_spectral_annotation </span>
-<span class="co">#&gt; 2022-01-24 14:45:50 ... metadata_table_biological_annotation </span>
-<span class="co">#&gt; 2022-01-24 14:45:50 ... edges table </span>
-<span class="co">#&gt; 2022-01-24 14:45:50 ... structure-organism pairs table </span>
-<span class="co">#&gt; 2022-01-24 14:46:03 ... single charge adducts table </span>
-<span class="co">#&gt; 2022-01-24 14:46:03 ... adducts masses for in source dimers and multicharged </span>
-<span class="co">#&gt; 2022-01-24 14:46:03 ... neutral lossses </span>
-<span class="co">#&gt; 2022-01-24 14:46:03 ... exact masses for MS1 annotation </span>
-<span class="co">#&gt; 2022-01-24 14:46:04 performing MS1 annotation </span>
+<span class="co">#&gt; 2022-01-24 14:59:45 Contributors: ... </span>
+<span class="co">#&gt; 2022-01-24 14:59:45 Loading paths </span>
+<span class="co">#&gt; 2022-01-24 14:59:45 Loading yaml parameters </span>
+<span class="co">#&gt; 2022-01-24 14:59:45 Loading command line arguments </span>
+<span class="co">#&gt; 2022-01-24 14:59:45 ... files ... </span>
+<span class="co">#&gt; 2022-01-24 14:59:45 ... metadata_table_spectral_annotation </span>
+<span class="co">#&gt; 2022-01-24 14:59:48 ... metadata_table_biological_annotation </span>
+<span class="co">#&gt; 2022-01-24 14:59:48 ... edges table </span>
+<span class="co">#&gt; 2022-01-24 14:59:48 ... structure-organism pairs table </span>
+<span class="co">#&gt; 2022-01-24 14:59:59 ... single charge adducts table </span>
+<span class="co">#&gt; 2022-01-24 14:59:59 ... adducts masses for in source dimers and multicharged </span>
+<span class="co">#&gt; 2022-01-24 14:59:59 ... neutral lossses </span>
+<span class="co">#&gt; 2022-01-24 14:59:59 ... exact masses for MS1 annotation </span>
+<span class="co">#&gt; 2022-01-24 15:00:00 performing MS1 annotation </span>
 <span class="co">#&gt; filtering desired adducts and adding mz tolerance </span>
 <span class="co">#&gt; setting to data.table format for faster performance </span>
 <span class="co">#&gt; adding rt tolerance ... </span>
@@ -157,8 +157,8 @@
 <span class="co">#&gt;  <span style="color: #00BB00;">1026357</span> <span style="color: #00BB00;">annotations</span> , on </span>
 <span class="co">#&gt;  <span style="color: #0000BB;">7129</span> <span style="color: #0000BB;">features</span> , of which </span>
 <span class="co">#&gt;  <span style="color: #BBBB00;">5483</span> were <span style="color: #BBBB00;">not previously annotated. </span></span>
-<span class="co"><span style="color: #BBBB00;">#&gt; </span>2022-01-24 14:46:23 adding biological organism metadata </span>
-<span class="co">#&gt; 2022-01-24 14:46:24 performing taxonomically informed scoring </span>
+<span class="co"><span style="color: #BBBB00;">#&gt; </span>2022-01-24 15:00:18 adding biological organism metadata </span>
+<span class="co">#&gt; 2022-01-24 15:00:18 performing taxonomically informed scoring </span>
 <span class="co">#&gt; normalizing initial score </span>
 <span class="co">#&gt; selecting DB columns </span>
 <span class="co">#&gt; keeping distinct candidates per taxonomical rank </span>
@@ -185,7 +185,7 @@
 <span class="co">#&gt;  <span style="color: #BBBB00;">7377</span> annotations reranked at the <span style="color: #BBBB00;">genus</span> level, </span>
 <span class="co">#&gt;  <span style="color: #00BB00;">2078</span> annotations reranked at the <span style="color: #00BB00;">species</span> level, </span>
 <span class="co">#&gt;  and <span style="color: #BB0000;">0</span> annotations reranked at the <span style="color: #BB0000;">variety</span> level. </span>
-<span class="co">#&gt; 2022-01-24 14:47:02 cleaning taxonomically informed results and preparing for chemically informed scoring </span>
+<span class="co">#&gt; 2022-01-24 15:00:53 cleaning taxonomically informed results and preparing for chemically informed scoring </span>
 <span class="co">#&gt; keeping only MS1 candidates with minimum </span>
 <span class="co">#&gt;  0.5  biological score </span>
 <span class="co">#&gt; erasing other MS1 candidates </span>
@@ -201,7 +201,7 @@
 <span class="co">#&gt; joining all except -1 together </span>
 <span class="co">#&gt; adding dummy consistency for features with less than 2 neighbors </span>
 <span class="co">#&gt; binding results together </span>
-<span class="co">#&gt; 2022-01-24 14:47:09 performing chemically informed scoring </span>
+<span class="co">#&gt; 2022-01-24 15:00:59 performing chemically informed scoring </span>
 <span class="co">#&gt; calculating chemical score ... </span>
 <span class="co">#&gt; ... adding metadata </span>
 <span class="co">#&gt; ... pathway </span>
@@ -214,7 +214,7 @@
 <span class="co">#&gt;  <span style="color: #0000BB;">20828</span> annotations reranked at the <span style="color: #0000BB;">pathway</span> level, </span>
 <span class="co">#&gt;  <span style="color: #BBBB00;">14728</span> annotations reranked at the <span style="color: #BBBB00;">superclass</span> level, and </span>
 <span class="co">#&gt;  <span style="color: #00BB00;">3629</span> annotations reranked at the <span style="color: #00BB00;">class</span> level. </span>
-<span class="co">#&gt; 2022-01-24 14:47:13 cleaning for cytoscape export </span>
+<span class="co">#&gt; 2022-01-24 15:01:02 cleaning for cytoscape export </span>
 <span class="co">#&gt; filtering top  3  candidates and keeping only MS1 candidates with minimum </span>
 <span class="co">#&gt;  0.5  biological score or </span>
 <span class="co">#&gt;  0.666 chemical score </span>
@@ -222,10 +222,10 @@
 <span class="co">#&gt; adding structures metadata </span>
 <span class="co">#&gt; selecting columns for cytoscape output </span>
 <span class="co">#&gt; summarizing results </span>
-<span class="co">#&gt; 2022-01-24 14:47:25 Exporting ... </span>
-<span class="co">#&gt; 2022-01-24 14:47:25 ... path to export is <span style="color: #00BB00;">inst/extdata/processed/220124_144725/FinalResults.tsv</span> </span>
-<span class="co">#&gt; 2022-01-24 14:47:25 ... path to used parameters is <span style="color: #00BB00;">inst/extdata/processed/220124_144725/process_annotations.yaml</span> </span>
-<span class="co">#&gt; 2022-01-24 14:47:25 Script finished in <span style="color: #00BB00;">1.639901 mins</span></span></code></pre></div>
+<span class="co">#&gt; 2022-01-24 15:01:13 Exporting ... </span>
+<span class="co">#&gt; 2022-01-24 15:01:13 ... path to export is <span style="color: #00BB00;">inst/extdata/processed/220124_150113/FinalResults.tsv</span> </span>
+<span class="co">#&gt; 2022-01-24 15:01:13 ... path to used parameters is <span style="color: #00BB00;">inst/extdata/processed/220124_150113/process_annotations.yaml</span> </span>
+<span class="co">#&gt; 2022-01-24 15:01:13 Script finished in <span style="color: #00BB00;">1.462017 mins</span></span></code></pre></div>
 <p>The final exported file is formatted in order to be easily imported in <a href="https://cytoscape.org/" class="external-link">Cytoscape</a> to further explore your data!</p>
 <p>We hope you enjoyed using <strong>TIMA</strong> and are pleased to hear from you!</p>
 <p>For any remark or suggestion, please <a href="https://github.com/taxonomicallyinformedannotation/tima-r/issues" class="external-link">fill an issue</a> or feel free to contact us directly.</p>
