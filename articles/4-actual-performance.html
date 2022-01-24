@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="timaR">
-<title>0 General comments about the infrastructure • timaR</title>
+<title>4 Actual Performance • timaR</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="0 General comments about the infrastructure">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="4 Actual Performance">
 <meta property="og:description" content="timaR">
 <meta property="og:image" content="https://taxonomicallyinformedannotation.github.io/tima-r/logo.png">
 <meta name="google-site-verification" content="Bt77rpBuC_R-0p62TWtA_ba5rvx-PuSEMv4LHg1UsOo">
@@ -83,48 +83,29 @@
 
 <div class="row">
   <main id="main"><div class="page-header">
-      <img src="../logo.png" class="logo" alt=""><h1>0 General comments about the infrastructure</h1>
+      <img src="../logo.png" class="logo" alt=""><h1>4 Actual Performance</h1>
                         <h4 data-toc-skip class="author">Adriano Rutz</h4>
             
             <h4 data-toc-skip class="date">2022-01-24</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/taxonomicallyinformedannotation/tima-r/blob/HEAD/vignettes/0-intro.Rmd" class="external-link"><code>vignettes/0-intro.Rmd</code></a></small>
-      <div class="d-none name"><code>0-intro.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/taxonomicallyinformedannotation/tima-r/blob/HEAD/vignettes/4-actual-performance.Rmd" class="external-link"><code>vignettes/4-actual-performance.Rmd</code></a></small>
+      <div class="d-none name"><code>4-actual-performance.Rmd</code></div>
     </div>
 
     
     
-<p>This vignette describes the philosophy behind the infrastructure of <strong>TIMA</strong>.</p>
+<p>This vignette simply shows the actual performance of TIMA.</p>
+<p>The benchmarking dataset was built using <a href="https://zenodo.org/record/5186176" class="external-link uri">https://zenodo.org/record/5186176</a>.</p>
+<p>It contains positive MS2 spectra of multiple ion species ([M+H]+, [M+Na]+, [M+NH4]+, …) coming from different mass spectrometers.</p>
 <div class="section level2">
-<h2 id="philosophy">Philosophy<a class="anchor" aria-label="anchor" href="#philosophy"></a>
+<h2 id="best-500-candidates">Best 500 candidates<a class="anchor" aria-label="anchor" href="#best-500-candidates"></a>
 </h2>
-<p>Our main goals were <strong>flexibility</strong> and <strong>reproducibility</strong>.</p>
-<div class="section level3">
-<h3 id="flexibility">Flexibility<a class="anchor" aria-label="anchor" href="#flexibility"></a>
-</h3>
-<p>To ensure flexibility, we tried to split the process in as much tiny parts as needed. So you can decide whether to skip an optional part, add your own processing, etc. We tried to cover most use cases, but of course they are not exhaustive. If you feel like something useful to other users is missing, please fill an <a href="https://github.com/taxonomicallyinformedannotation/tima-r/issues" class="external-link">issue</a>.</p>
-</div>
-<div class="section level3">
-<h3 id="reproducibility">Reproducibility<a class="anchor" aria-label="anchor" href="#reproducibility"></a>
-</h3>
-<p>After some time using TIMA, you will probably wonder: “<em>What was the parameters I used to generate this file?</em>” … Or a collaborator might ask you to share your data and parameters. Writing them down each time might be time consuming and not really in line with modern computational approaches. Therefore, we chose to implement all parameters of all steps (almost…) as YAML files. They are human-readable and can be used in batches. If you do not like YAML, parameters of each steps can also be given as command line arguments. They will then be saved as YAML you will be able to share.</p>
-</div>
+<p><img src="benchmark_full.svg" alt="benchmark"><br></p>
 </div>
 <div class="section level2">
-<h2 id="use">Use<a class="anchor" aria-label="anchor" href="#use"></a>
+<h2 id="best-25-candidates-zoomed">Best 25 candidates (zoomed)<a class="anchor" aria-label="anchor" href="#best-25-candidates-zoomed"></a>
 </h2>
-<p>Each step is detailed in the related <a href="https://taxonomicallyinformedannotation.github.io/tima-r/articles">vignettes</a>.</p>
-<p>All coming steps admit you already cloned the repository and went to its root:</p>
-<pre><code>git clone https://github.com/taxonomicallyinformedannotation/tima-r.git
-cd tima-r</code></pre>
-<div class="section level3">
-<h3 id="copy-initial-parameters">Copy initial parameters<a class="anchor" aria-label="anchor" href="#copy-initial-parameters"></a>
-</h3>
-<p>As mentioned previously, scripts need some parameters to be filled. Some pre-defined parameters are given in <code>config/default</code> directory. Those will help you understanding how the workflow works so you can adapt them later to your own data. So first, start by copying them into <code>config/params</code> directory. To do so:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-a</span> <span class="at">--delete</span> config/default/ config/params</span></code></pre></div>
-<p>You now have all parameters copied in <code>config/params</code> directory, so you can start modifying them according to your own data.</p>
-<p>We now recommend you to read the <a href="https://taxonomicallyinformedannotation.github.io/tima-r/articles/1-library.html">next vignette</a>.</p>
-</div>
+<p><img src="benchmark_zoomed.svg" alt="benchmark_zoomed"><br></p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
