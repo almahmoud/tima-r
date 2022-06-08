@@ -118,9 +118,6 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_taxa.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/pretreat_names_sirius.html</loc>
-  </url>
-  <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/process_annotations.html</loc>
   </url>
   <url>
@@ -128,8 +125,5 @@
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/timaR-package.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/treat_names_sirius.html</loc>
   </url>
 </urlset>
