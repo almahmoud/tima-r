@@ -61,49 +61,49 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">process_annotations</span><span class="op">(</span>
-  library <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">library</span>,
-  name <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">name</span>,
-  gnps <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">annotation</span><span class="op">$</span><span class="va">gnps</span>,
-  isdb <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">annotation</span><span class="op">$</span><span class="va">isdb</span>,
-  sirius <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">annotation</span><span class="op">$</span><span class="va">sirius</span>,
-  taxa <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">taxa</span>,
-  edges <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">edges</span>,
-  output <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">output</span>,
-  candidates_initial <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">top_k</span><span class="op">$</span><span class="va">initial</span>,
-  candidates_final <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">top_k</span><span class="op">$</span><span class="va">final</span>,
-  weight_spectral <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">weights</span><span class="op">$</span><span class="va">spectral</span>,
-  weight_chemical <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">weights</span><span class="op">$</span><span class="va">chemical</span>,
-  weight_biological <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">weights</span><span class="op">$</span><span class="va">biological</span>,
-  score_chemical_pathway <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">chemical</span><span class="op">$</span><span class="va">pathway</span>,
-  score_chemical_superclass <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">chemical</span><span class="op">$</span><span class="va">superclass</span>,
-  score_chemical_class <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">chemical</span><span class="op">$</span><span class="va">class</span>,
-  score_biological_domain <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">domain</span>,
-  score_biological_kingdom <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">kingdom</span>,
-  score_biological_phylum <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">phylum</span>,
-  score_biological_class <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">class</span>,
-  score_biological_order <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">order</span>,
-  score_biological_infraorder <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">infraorder</span>,
-  score_biological_family <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">family</span>,
-  score_biological_subfamily <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">subfamily</span>,
-  score_biological_tribe <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">tribe</span>,
-  score_biological_subtribe <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">subtribe</span>,
-  score_biological_genus <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">genus</span>,
-  score_biological_subgenus <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">subgenus</span>,
-  score_biological_species <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">species</span>,
-  score_biological_subspecies <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">subspecies</span>,
-  score_biological_variety <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">variety</span>,
-  ms_mode <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">mode</span>,
-  ms_level <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">level</span>,
-  annotate <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">annotate</span>,
-  tolerance_ppm <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">tolerance</span><span class="op">$</span><span class="va">ppm</span>,
-  tolerance_rt <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">tolerance</span><span class="op">$</span><span class="va">rt</span>,
-  adducts_list <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">adducts</span>,
-  minimal_ms1_bio <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">minimal</span>,
-  minimal_ms1_chemo <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">chemical</span><span class="op">$</span><span class="va">minimal</span>,
-  ms1_only <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">ms1only</span>,
-  force <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">force</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">process_annotations</span><span class="op">(</span></span>
+<span>  library <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">library</span>,</span>
+<span>  name <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">name</span>,</span>
+<span>  gnps <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">annotation</span><span class="op">$</span><span class="va">gnps</span>,</span>
+<span>  isdb <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">annotation</span><span class="op">$</span><span class="va">isdb</span>,</span>
+<span>  sirius <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">annotation</span><span class="op">$</span><span class="va">sirius</span>,</span>
+<span>  taxa <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">taxa</span>,</span>
+<span>  edges <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">edges</span>,</span>
+<span>  output <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">output</span>,</span>
+<span>  candidates_initial <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">top_k</span><span class="op">$</span><span class="va">initial</span>,</span>
+<span>  candidates_final <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">top_k</span><span class="op">$</span><span class="va">final</span>,</span>
+<span>  weight_spectral <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">weights</span><span class="op">$</span><span class="va">spectral</span>,</span>
+<span>  weight_chemical <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">weights</span><span class="op">$</span><span class="va">chemical</span>,</span>
+<span>  weight_biological <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">weights</span><span class="op">$</span><span class="va">biological</span>,</span>
+<span>  score_chemical_pathway <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">chemical</span><span class="op">$</span><span class="va">pathway</span>,</span>
+<span>  score_chemical_superclass <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">chemical</span><span class="op">$</span><span class="va">superclass</span>,</span>
+<span>  score_chemical_class <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">chemical</span><span class="op">$</span><span class="va">class</span>,</span>
+<span>  score_biological_domain <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">domain</span>,</span>
+<span>  score_biological_kingdom <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">kingdom</span>,</span>
+<span>  score_biological_phylum <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">phylum</span>,</span>
+<span>  score_biological_class <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">class</span>,</span>
+<span>  score_biological_order <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">order</span>,</span>
+<span>  score_biological_infraorder <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">infraorder</span>,</span>
+<span>  score_biological_family <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">family</span>,</span>
+<span>  score_biological_subfamily <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">subfamily</span>,</span>
+<span>  score_biological_tribe <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">tribe</span>,</span>
+<span>  score_biological_subtribe <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">subtribe</span>,</span>
+<span>  score_biological_genus <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">genus</span>,</span>
+<span>  score_biological_subgenus <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">subgenus</span>,</span>
+<span>  score_biological_species <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">species</span>,</span>
+<span>  score_biological_subspecies <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">subspecies</span>,</span>
+<span>  score_biological_variety <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">variety</span>,</span>
+<span>  ms_mode <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">mode</span>,</span>
+<span>  ms_level <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">level</span>,</span>
+<span>  annotate <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">annotate</span>,</span>
+<span>  tolerance_ppm <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">tolerance</span><span class="op">$</span><span class="va">ppm</span>,</span>
+<span>  tolerance_rt <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">tolerance</span><span class="op">$</span><span class="va">rt</span>,</span>
+<span>  adducts_list <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">adducts</span>,</span>
+<span>  minimal_ms1_bio <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">biological</span><span class="op">$</span><span class="va">minimal</span>,</span>
+<span>  minimal_ms1_chemo <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">scores</span><span class="op">$</span><span class="va">chemical</span><span class="op">$</span><span class="va">minimal</span>,</span>
+<span>  ms1_only <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">ms1only</span>,</span>
+<span>  force <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">force</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -288,7 +288,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer></div>

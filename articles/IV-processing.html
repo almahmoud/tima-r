@@ -90,7 +90,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>3 Performing Taxonomically Informed Metabolite Annotation</h1>
                         <h4 data-toc-skip class="author">Adriano Rutz</h4>
             
-            <h4 data-toc-skip class="date">2022-06-24</h4>
+            <h4 data-toc-skip class="date">2022-07-01</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/taxonomicallyinformedannotation/tima-r/blob/HEAD/vignettes/IV-processing.Rmd" class="external-link"><code>vignettes/IV-processing.Rmd</code></a></small>
       <div class="d-none name"><code>IV-processing.Rmd</code></div>
@@ -100,132 +100,132 @@
     
 <p>This vignette describes how to perform <strong>T</strong>axonomically <strong>I</strong>nformed <strong>M</strong>etabolite <strong>A</strong>nnotation. If you followed all previous steps successfully, this should be a piece of cake, you deserve it!</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/taxonomicallyinformedannotation/tima-r" class="external-link">"timaR"</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/taxonomicallyinformedannotation/tima-r" class="external-link">"timaR"</a></span><span class="op">)</span></span></code></pre></div>
 <p>Before running the corresponding code, do not forget to modify <code>config/params/process_annotations.yaml</code>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/process_annotations.R"</span><span class="op">)</span>
-<span class="co">#&gt; 2022-06-24 14:04:29 This script performs <span style="color: #00BB00;">taxonomically informed scoring</span> preceded by <span style="color: #0000BB;">MS1 annotation</span> and followed by <span style="color: #BBBB00;">chemical consistency informed scoring</span> </span>
-<span class="co">#&gt; 2022-06-24 14:04:29 Authors:  <span style="color: #00BB00;">AR</span> , <span style="color: #0000BB;">PMA</span> </span>
-<span class="co">#&gt;  </span>
-<span class="co">#&gt; 2022-06-24 14:04:29 Contributors: ... </span>
-<span class="co">#&gt; 2022-06-24 14:04:29 Loading paths </span>
-<span class="co">#&gt; 2022-06-24 14:04:29 Loading yaml parameters </span>
-<span class="co">#&gt; 2022-06-24 14:04:29 Loading command line arguments </span>
-<span class="co">#&gt; 2022-06-24 14:04:29 ... files ... </span>
-<span class="co">#&gt; 2022-06-24 14:04:29 ... annotations </span>
-<span class="co">#&gt; 2022-06-24 14:04:33 ... metadata_table_biological_annotation </span>
-<span class="co">#&gt; 2022-06-24 14:04:33 ... edges table </span>
-<span class="co">#&gt; 2022-06-24 14:04:34 ... structure-organism pairs table </span>
-<span class="co">#&gt; 2022-06-24 14:05:04 ... single charge adducts table </span>
-<span class="co">#&gt; 2022-06-24 14:05:05 ... adducts masses for in source dimers and multicharged </span>
-<span class="co">#&gt; 2022-06-24 14:05:05 ... neutral lossses </span>
-<span class="co">#&gt; 2022-06-24 14:05:05 ... exact masses for MS1 annotation </span>
-<span class="co">#&gt; 2022-06-24 14:05:06 performing MS1 annotation </span>
-<span class="co">#&gt; filtering desired adducts and adding mz tolerance </span>
-<span class="co">#&gt; setting to data.table format for faster performance </span>
-<span class="co">#&gt; adding rt tolerance ... </span>
-<span class="co">#&gt; ... on the other side (without tolerance) </span>
-<span class="co">#&gt; setting joining keys </span>
-<span class="co">#&gt; joining within given rt tolerance </span>
-<span class="co">#&gt; adding delta mz tolerance for single charge adducts </span>
-<span class="co">#&gt; calculating delta mz for single charge adducts </span>
-<span class="co">#&gt; setting joining keys </span>
-<span class="co">#&gt; neutral losses </span>
-<span class="co">#&gt; setting joining keys </span>
-<span class="co">#&gt; joining within given delta mz tolerance (neutral losses) </span>
-<span class="co">#&gt; joining within given delta mz tolerance (adducts) </span>
-<span class="co">#&gt; keeping initial and destination feature </span>
-<span class="co">#&gt; joining with initial results (adducts) </span>
-<span class="co">#&gt; joining with initial results (neutral losses) </span>
-<span class="co">#&gt; setting joining keys </span>
-<span class="co">#&gt; joining within given mz tolerance and filtering possible single charge adducts only </span>
-<span class="co">#&gt; cleaning results </span>
-<span class="co">#&gt; keeping unique adducts per exact mass </span>
-<span class="co">#&gt; joining exact masses with single charge adducts </span>
-<span class="co">#&gt; adding adduct mass to get back to [M] </span>
-<span class="co">#&gt; keeping these ions for dimers and multicharged exploration starting from [M] </span>
-<span class="co">#&gt; calculating multicharged and in source dimers and adding delta mz tolerance </span>
-<span class="co">#&gt; setting joining keys </span>
-<span class="co">#&gt; joining within given rt tolerance </span>
-<span class="co">#&gt; setting joining keys </span>
-<span class="co">#&gt; setting joining keys </span>
-<span class="co">#&gt; joining within given mz tolerance and filtering possible multicharge / dimeric adducts </span>
-<span class="co">#&gt; formatting initial results </span>
-<span class="co">#&gt; joining MS2 results, single adducts, neutral losses, and multicharged / dimers and ranking </span>
-<span class="co">#&gt; adding "notAnnotated" </span>
-<span class="co">#&gt; MS1 annotation led to </span>
-<span class="co">#&gt;  <span style="color: #00BB00;">1367132</span> <span style="color: #00BB00;">annotations</span> , on </span>
-<span class="co">#&gt;  <span style="color: #0000BB;">7130</span> <span style="color: #0000BB;">features</span> , of which </span>
-<span class="co">#&gt;  <span style="color: #BBBB00;">5487</span> were <span style="color: #BBBB00;">not previously annotated. </span></span>
-<span class="co"><span style="color: #BBBB00;">#&gt; </span>2022-06-24 14:05:41 adding biological organism metadata </span>
-<span class="co">#&gt; 2022-06-24 14:05:42 performing taxonomically informed scoring </span>
-<span class="co">#&gt; normalizing initial score </span>
-<span class="co">#&gt; selecting DB columns </span>
-<span class="co">#&gt; keeping distinct candidates per taxonomical rank </span>
-<span class="co">#&gt; calculating biological scores ... </span>
-<span class="co">#&gt; ... domain </span>
-<span class="co">#&gt; ... kingdom </span>
-<span class="co">#&gt; ... phylum </span>
-<span class="co">#&gt; ... class </span>
-<span class="co">#&gt; ... order </span>
-<span class="co">#&gt; ... family </span>
-<span class="co">#&gt; ... tribe </span>
-<span class="co">#&gt; ... genus </span>
-<span class="co">#&gt; ... species </span>
-<span class="co">#&gt; ... varietas </span>
-<span class="co">#&gt; keeping best biological score only </span>
-<span class="co">#&gt; joining with initial results </span>
-<span class="co">#&gt; adding "notClassified" </span>
-<span class="co">#&gt; taxonomically informed scoring led to </span>
-<span class="co">#&gt;  <span style="color: #555555;">1034366</span> annotations reranked at the <span style="color: #555555;">kingdom</span> level, </span>
-<span class="co">#&gt;  <span style="color: #BBBBBB;">1023951</span> annotations reranked at the <span style="color: #BBBBBB;">phylum</span> level, </span>
-<span class="co">#&gt;  <span style="color: #00BBBB;">770504</span> annotations reranked at the <span style="color: #00BBBB;">class</span> level, </span>
-<span class="co">#&gt;  <span style="color: #BB00BB;">128146</span> annotations reranked at the <span style="color: #BB00BB;">order</span> level, </span>
-<span class="co">#&gt;  <span style="color: #0000BB;">106213</span> annotations reranked at the <span style="color: #0000BB;">family</span> level, </span>
-<span class="co">#&gt;  <span style="color: #BBBB00;">9799</span> annotations reranked at the <span style="color: #BBBB00;">genus</span> level, </span>
-<span class="co">#&gt;  <span style="color: #00BB00;">2616</span> annotations reranked at the <span style="color: #00BB00;">species</span> level, </span>
-<span class="co">#&gt;  and <span style="color: #BB0000;">0</span> annotations reranked at the <span style="color: #BB0000;">variety</span> level. </span>
-<span class="co">#&gt; 2022-06-24 14:06:48 cleaning taxonomically informed results and preparing for chemically informed scoring </span>
-<span class="co">#&gt; keeping only MS1 candidates with minimum </span>
-<span class="co">#&gt;  0.5  biological score </span>
-<span class="co">#&gt; erasing other MS1 candidates </span>
-<span class="co">#&gt; adding "notAnnotated" </span>
-<span class="co">#&gt; adding "notClassified" </span>
-<span class="co">#&gt; keeping clusters with at least 3 features  </span>
-<span class="co">#&gt; keeping clusters with less than 3 features </span>
-<span class="co">#&gt; calculating chemical consistency features with at least 2 neighbors ... </span>
-<span class="co">#&gt; ... among edges ... </span>
-<span class="co">#&gt; ... at the pathway level </span>
-<span class="co">#&gt; ... at the superclass level </span>
-<span class="co">#&gt; ... at the class level </span>
-<span class="co">#&gt; joining all except -1 together </span>
-<span class="co">#&gt; adding dummy consistency for features with less than 2 neighbors </span>
-<span class="co">#&gt; binding results together </span>
-<span class="co">#&gt; 2022-06-24 14:07:01 performing chemically informed scoring </span>
-<span class="co">#&gt; calculating chemical score ... </span>
-<span class="co">#&gt; ... adding metadata </span>
-<span class="co">#&gt; ... pathway </span>
-<span class="co">#&gt; ... superclass </span>
-<span class="co">#&gt; ... class </span>
-<span class="co">#&gt; ... outputting best score </span>
-<span class="co">#&gt; ... joining </span>
-<span class="co">#&gt; ... cleaning </span>
-<span class="co">#&gt; chemically informed scoring led to </span>
-<span class="co">#&gt;  <span style="color: #0000BB;">26622</span> annotations reranked at the <span style="color: #0000BB;">pathway</span> level, </span>
-<span class="co">#&gt;  <span style="color: #BBBB00;">18183</span> annotations reranked at the <span style="color: #BBBB00;">superclass</span> level, and </span>
-<span class="co">#&gt;  <span style="color: #00BB00;">4725</span> annotations reranked at the <span style="color: #00BB00;">class</span> level. </span>
-<span class="co">#&gt; 2022-06-24 14:07:16 cleaning for cytoscape export </span>
-<span class="co">#&gt; filtering top  3  candidates and keeping only MS1 candidates with minimum </span>
-<span class="co">#&gt;  0.5  biological score or </span>
-<span class="co">#&gt;  0.666 chemical score </span>
-<span class="co">#&gt; adding initial metadata (RT, etc.) and simplifying columns </span>
-<span class="co">#&gt; adding structures metadata </span>
-<span class="co">#&gt; selecting columns for cytoscape output </span>
-<span class="co">#&gt; summarizing results </span>
-<span class="co">#&gt; 2022-06-24 14:08:08 Exporting ... </span>
-<span class="co">#&gt; 2022-06-24 14:08:08 ... path to export is <span style="color: #00BB00;">inst/extdata/processed/220624_140808/FinalResults.tsv</span> </span>
-<span class="co">#&gt; 2022-06-24 14:08:08 ... path to used parameters is <span style="color: #00BB00;">inst/extdata/processed/220624_140808/tima_2.5.2_process_annotations.yaml</span> </span>
-<span class="co">#&gt; 2022-06-24 14:08:08 Script finished in <span style="color: #00BB00;">3.655685 mins</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/process_annotations.R"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:16 This script performs <span style="color: #00BB00;">taxonomically informed scoring</span> preceded by <span style="color: #0000BB;">MS1 annotation</span> and followed by <span style="color: #BBBB00;">chemical consistency informed scoring</span> </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:16 Authors:  <span style="color: #00BB00;">AR</span> , <span style="color: #0000BB;">PMA</span> </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:16 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:16 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:16 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:16 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:16 ... files ... </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:16 ... annotations </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:20 ... metadata_table_biological_annotation </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:20 ... edges table </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:20 ... structure-organism pairs table </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:52 ... single charge adducts table </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:52 ... adducts masses for in source dimers and multicharged </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:52 ... neutral lossses </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:52 ... exact masses for MS1 annotation </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:43:53 performing MS1 annotation </span></span>
+<span><span class="co">#&gt; filtering desired adducts and adding mz tolerance </span></span>
+<span><span class="co">#&gt; setting to data.table format for faster performance </span></span>
+<span><span class="co">#&gt; adding rt tolerance ... </span></span>
+<span><span class="co">#&gt; ... on the other side (without tolerance) </span></span>
+<span><span class="co">#&gt; setting joining keys </span></span>
+<span><span class="co">#&gt; joining within given rt tolerance </span></span>
+<span><span class="co">#&gt; adding delta mz tolerance for single charge adducts </span></span>
+<span><span class="co">#&gt; calculating delta mz for single charge adducts </span></span>
+<span><span class="co">#&gt; setting joining keys </span></span>
+<span><span class="co">#&gt; neutral losses </span></span>
+<span><span class="co">#&gt; setting joining keys </span></span>
+<span><span class="co">#&gt; joining within given delta mz tolerance (neutral losses) </span></span>
+<span><span class="co">#&gt; joining within given delta mz tolerance (adducts) </span></span>
+<span><span class="co">#&gt; keeping initial and destination feature </span></span>
+<span><span class="co">#&gt; joining with initial results (adducts) </span></span>
+<span><span class="co">#&gt; joining with initial results (neutral losses) </span></span>
+<span><span class="co">#&gt; setting joining keys </span></span>
+<span><span class="co">#&gt; joining within given mz tolerance and filtering possible single charge adducts only </span></span>
+<span><span class="co">#&gt; cleaning results </span></span>
+<span><span class="co">#&gt; keeping unique adducts per exact mass </span></span>
+<span><span class="co">#&gt; joining exact masses with single charge adducts </span></span>
+<span><span class="co">#&gt; adding adduct mass to get back to [M] </span></span>
+<span><span class="co">#&gt; keeping these ions for dimers and multicharged exploration starting from [M] </span></span>
+<span><span class="co">#&gt; calculating multicharged and in source dimers and adding delta mz tolerance </span></span>
+<span><span class="co">#&gt; setting joining keys </span></span>
+<span><span class="co">#&gt; joining within given rt tolerance </span></span>
+<span><span class="co">#&gt; setting joining keys </span></span>
+<span><span class="co">#&gt; setting joining keys </span></span>
+<span><span class="co">#&gt; joining within given mz tolerance and filtering possible multicharge / dimeric adducts </span></span>
+<span><span class="co">#&gt; formatting initial results </span></span>
+<span><span class="co">#&gt; joining MS2 results, single adducts, neutral losses, and multicharged / dimers and ranking </span></span>
+<span><span class="co">#&gt; adding "notAnnotated" </span></span>
+<span><span class="co">#&gt; MS1 annotation led to </span></span>
+<span><span class="co">#&gt;  <span style="color: #00BB00;">1480980</span> <span style="color: #00BB00;">annotations</span> , on </span></span>
+<span><span class="co">#&gt;  <span style="color: #0000BB;">7130</span> <span style="color: #0000BB;">features</span> , of which </span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBB00;">5488</span> were <span style="color: #BBBB00;">not previously annotated. </span></span></span>
+<span><span class="co"><span style="color: #BBBB00;">#&gt; </span>2022-07-01 09:44:32 adding biological organism metadata </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:44:35 performing taxonomically informed scoring </span></span>
+<span><span class="co">#&gt; normalizing initial score </span></span>
+<span><span class="co">#&gt; selecting DB columns </span></span>
+<span><span class="co">#&gt; keeping distinct candidates per taxonomical rank </span></span>
+<span><span class="co">#&gt; calculating biological scores ... </span></span>
+<span><span class="co">#&gt; ... domain </span></span>
+<span><span class="co">#&gt; ... kingdom </span></span>
+<span><span class="co">#&gt; ... phylum </span></span>
+<span><span class="co">#&gt; ... class </span></span>
+<span><span class="co">#&gt; ... order </span></span>
+<span><span class="co">#&gt; ... family </span></span>
+<span><span class="co">#&gt; ... tribe </span></span>
+<span><span class="co">#&gt; ... genus </span></span>
+<span><span class="co">#&gt; ... species </span></span>
+<span><span class="co">#&gt; ... varietas </span></span>
+<span><span class="co">#&gt; keeping best biological score only </span></span>
+<span><span class="co">#&gt; joining with initial results </span></span>
+<span><span class="co">#&gt; adding "notClassified" </span></span>
+<span><span class="co">#&gt; taxonomically informed scoring led to </span></span>
+<span><span class="co">#&gt;  <span style="color: #555555;">1040654</span> annotations reranked at the <span style="color: #555555;">kingdom</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBBBB;">1029668</span> annotations reranked at the <span style="color: #BBBBBB;">phylum</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #00BBBB;">775455</span> annotations reranked at the <span style="color: #00BBBB;">class</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #BB00BB;">128381</span> annotations reranked at the <span style="color: #BB00BB;">order</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #0000BB;">106237</span> annotations reranked at the <span style="color: #0000BB;">family</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBB00;">9860</span> annotations reranked at the <span style="color: #BBBB00;">genus</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #00BB00;">2621</span> annotations reranked at the <span style="color: #00BB00;">species</span> level, </span></span>
+<span><span class="co">#&gt;  and <span style="color: #BB0000;">0</span> annotations reranked at the <span style="color: #BB0000;">variety</span> level. </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:46:02 cleaning taxonomically informed results and preparing for chemically informed scoring </span></span>
+<span><span class="co">#&gt; keeping only MS1 candidates with minimum </span></span>
+<span><span class="co">#&gt;  0.5  biological score </span></span>
+<span><span class="co">#&gt; erasing other MS1 candidates </span></span>
+<span><span class="co">#&gt; adding "notAnnotated" </span></span>
+<span><span class="co">#&gt; adding "notClassified" </span></span>
+<span><span class="co">#&gt; keeping clusters with at least 3 features  </span></span>
+<span><span class="co">#&gt; keeping clusters with less than 3 features </span></span>
+<span><span class="co">#&gt; calculating chemical consistency features with at least 2 neighbors ... </span></span>
+<span><span class="co">#&gt; ... among edges ... </span></span>
+<span><span class="co">#&gt; ... at the pathway level </span></span>
+<span><span class="co">#&gt; ... at the superclass level </span></span>
+<span><span class="co">#&gt; ... at the class level </span></span>
+<span><span class="co">#&gt; joining all except -1 together </span></span>
+<span><span class="co">#&gt; adding dummy consistency for features with less than 2 neighbors </span></span>
+<span><span class="co">#&gt; binding results together </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:46:19 performing chemically informed scoring </span></span>
+<span><span class="co">#&gt; calculating chemical score ... </span></span>
+<span><span class="co">#&gt; ... adding metadata </span></span>
+<span><span class="co">#&gt; ... pathway </span></span>
+<span><span class="co">#&gt; ... superclass </span></span>
+<span><span class="co">#&gt; ... class </span></span>
+<span><span class="co">#&gt; ... outputting best score </span></span>
+<span><span class="co">#&gt; ... joining </span></span>
+<span><span class="co">#&gt; ... cleaning </span></span>
+<span><span class="co">#&gt; chemically informed scoring led to </span></span>
+<span><span class="co">#&gt;  <span style="color: #0000BB;">26810</span> annotations reranked at the <span style="color: #0000BB;">pathway</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBB00;">18437</span> annotations reranked at the <span style="color: #BBBB00;">superclass</span> level, and </span></span>
+<span><span class="co">#&gt;  <span style="color: #00BB00;">4753</span> annotations reranked at the <span style="color: #00BB00;">class</span> level. </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:46:39 cleaning for cytoscape export </span></span>
+<span><span class="co">#&gt; filtering top  3  candidates and keeping only MS1 candidates with minimum </span></span>
+<span><span class="co">#&gt;  0.5  biological score or </span></span>
+<span><span class="co">#&gt;  0.666 chemical score </span></span>
+<span><span class="co">#&gt; adding initial metadata (RT, etc.) and simplifying columns </span></span>
+<span><span class="co">#&gt; adding structures metadata </span></span>
+<span><span class="co">#&gt; selecting columns for cytoscape output </span></span>
+<span><span class="co">#&gt; summarizing results </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:47:41 Exporting ... </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:47:41 ... path to export is <span style="color: #00BB00;">inst/extdata/processed/220701_094741/FinalResults.tsv</span> </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:47:41 ... path to used parameters is <span style="color: #00BB00;">inst/extdata/processed/220701_094741/tima_2.5.2_process_annotations.yaml</span> </span></span>
+<span><span class="co">#&gt; 2022-07-01 09:47:41 Script finished in <span style="color: #00BB00;">4.424449 mins</span></span></span></code></pre></div>
 <p>The final exported file is formatted in order to be easily imported in <a href="https://cytoscape.org/" class="external-link">Cytoscape</a> to further explore your data!</p>
 <p>We hope you enjoyed using <strong>TIMA</strong> and are pleased to hear from you!</p>
 <p>For any remark or suggestion, please <a href="https://github.com/taxonomicallyinformedannotation/tima-r/issues" class="external-link">fill an issue</a> or feel free to contact us directly.</p>
@@ -242,7 +242,7 @@
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer>
