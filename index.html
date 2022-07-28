@@ -38,7 +38,7 @@
     
     <a class="navbar-brand me-2" href="index.html">timaR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.5.4</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.5.5</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,7 +109,7 @@
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>As the package is not (yet) available on CRAN, you will need to install the development version, therefore:</p>
-<p>On UNIX systems:</p>
+<p>On *nix systems:</p>
 <pre class="shell"><code>Rscript -e 'if(!requireNamespace("remotes")){install.packages("remotes")}
 remotes::install_github("taxonomicallyinformedannotation/tima-r")'</code></pre>
 <p>On Windows:</p>
@@ -123,8 +123,9 @@ remotes::install_github('taxonomicallyinformedannotation/tima-r')"</code></pre>
 <p>Do not forget to clone the repository (it will allow you to access default architecture, files, and parameters):</p>
 <pre class="shell"><code>git clone https://github.com/taxonomicallyinformedannotation/tima-r.git
 cd tima-r</code></pre>
-<p>Then, copy the defaut parameters:</p>
-<pre class="shell"><code>rsync -a --delete config/default/ config/params</code></pre>
+<p>Then, to copy the defaut parameters:</p>
+<pre class="shell"><code>Rscript inst/scripts/prepare_params.R</code></pre>
+<p>This command will also be useful in case you want to automate your workflow. More details are given in the <a href="https://taxonomicallyinformedannotation.github.io/tima-r/articles/I-intro.html">General comments about the infrastructure</a></p>
 <p>Once done, you can start with an example using:</p>
 <pre class="shell"><code>Rscript inst/scripts/tima.R</code></pre>
 </div>
