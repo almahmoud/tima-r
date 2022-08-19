@@ -90,7 +90,7 @@
       <img src="../logo.svg" class="logo" alt=""><h1>1 Preparing your structure-organism pairs library</h1>
                         <h4 data-toc-skip class="author">Adriano Rutz</h4>
             
-            <h4 data-toc-skip class="date">2022-08-18</h4>
+            <h4 data-toc-skip class="date">2022-08-19</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/taxonomicallyinformedannotation/tima-r/blob/HEAD/vignettes/II-library.Rmd" class="external-link"><code>vignettes/II-library.Rmd</code></a></small>
       <div class="d-none name"><code>II-library.Rmd</code></div>
@@ -118,10 +118,10 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/get_lotus.R"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; This script <span style="color: #00BB00;">downloads LOTUS referenced structure-organism pairs. </span></span></span>
-<span><span class="co"><span style="color: #00BB00;">#&gt; </span>2022-08-18 18:14:26 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co"><span style="color: #00BB00;">#&gt; </span>2022-08-19 06:23:42 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:14:26 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:14:26 Loading paths</span></span>
+<span><span class="co">#&gt; 2022-08-19 06:23:42 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:23:42 Loading paths</span></span>
 <span><span class="co">#&gt; Warning: One or more parsing issues, see `problems()` for details</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">801614</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">38</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
@@ -132,7 +132,7 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-08-18 18:16:57 Script finished in <span style="color: #00BB00;">2.520412 mins</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-08-19 06:25:28 Script finished in <span style="color: #00BB00;">1.761838 mins</span></span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="preparation">preparation<a class="anchor" aria-label="anchor" href="#preparation"></a>
@@ -140,13 +140,13 @@
 <p>Then, <strong>LOTUS</strong> structure-organism pairs can be prepared to the right format for further processing:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/prepare_lotus.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-08-18 18:16:58 This script <span style="color: #00BB00;">prepares LOTUS referenced structure-organism pairs </span></span></span>
+<span><span class="co">#&gt; 2022-08-19 06:25:28 This script <span style="color: #00BB00;">prepares LOTUS referenced structure-organism pairs </span></span></span>
 <span><span class="co"><span style="color: #00BB00;">#&gt; </span> </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:16:58 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:25:28 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:16:58 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:16:58 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:16:58 Loading files</span></span>
+<span><span class="co">#&gt; 2022-08-19 06:25:28 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:25:28 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:25:28 Loading files</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">801614</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">38</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> ","</span></span>
@@ -156,8 +156,8 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:17 Exporting ... </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Script finished in <span style="color: #00BB00;">28.16595 secs</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-08-19 06:26:26 Exporting ... </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Script finished in <span style="color: #00BB00;">1.103568 mins</span></span></span></code></pre></div>
 <p>For these two first steps, you do not need to change any parameters as they are implemented <em>by default</em>.</p>
 </div>
 </div>
@@ -168,16 +168,16 @@
 <p>Before running the corresponding code, do not forget to modify <code>config/params/prepare_closed.yaml</code></p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/prepare_closed.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 This script <span style="color: #00BB00;">prepares closed referenced structure-organism pairs </span></span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 This script <span style="color: #00BB00;">prepares closed referenced structure-organism pairs </span></span></span>
 <span><span class="co"><span style="color: #00BB00;">#&gt; </span> </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Sorry, you do not have access to the closed resource </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Script finished in <span style="color: #00BB00;">0.0566051 secs</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Sorry, you do not have access to the closed resource </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Script finished in <span style="color: #00BB00;">0.05595899 secs</span></span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="merging">Merging<a class="anchor" aria-label="anchor" href="#merging"></a>
@@ -187,15 +187,15 @@
 <p>At this step, if you want to, you can restrict your library to specific taxa only. We do not advise doing so, but we offer you the possibility to do it.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/prepare_library.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 This script <span style="color: #00BB00;">prepares a library from prepared sub-libraries. </span></span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 This script <span style="color: #00BB00;">prepares a library from prepared sub-libraries. </span></span></span>
 <span><span class="co"><span style="color: #00BB00;">#&gt; </span> </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:26 Loading and concatenating prepared libraries</span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:34 Loading and concatenating prepared libraries</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">797882</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">21</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -204,10 +204,10 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:34 Exporting ... </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:34 ... path to export is inst/extdata/interim/libraries/library.tsv.gz </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:40 ... path to used parameters is inst/extdata/interim/config </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:40 Script finished in <span style="color: #00BB00;">13.88326 secs</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-08-19 06:26:59 Exporting ... </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:26:59 ... path to export is inst/extdata/interim/libraries/library.tsv.gz </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:05 ... path to used parameters is inst/extdata/interim/config </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:05 Script finished in <span style="color: #00BB00;">31.02083 secs</span></span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="adducts-library">Adducts library<a class="anchor" aria-label="anchor" href="#adducts-library"></a>
@@ -216,15 +216,15 @@
 <p>Before running the corresponding code, do not forget to modify <code>config/params/prepare_adducts.yaml</code>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/prepare_adducts.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:40 This script <span style="color: #00BB00;">prepares adducts</span> </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:40 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:06 This script <span style="color: #00BB00;">prepares adducts</span> </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:06 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:40 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:40 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:40 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:40 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:40 Loading files ... </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:40 ... exact masses</span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:06 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:06 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:06 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:06 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:06 Loading files ... </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:06 ... exact masses</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">797882</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">1</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -232,7 +232,7 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:42 ... adducts</span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:23 ... adducts</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">18</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">2</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -241,22 +241,22 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:42 Treating adducts table</span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:23 Treating adducts table</span></span>
 <span><span class="co">#&gt; Warning in data.frame(..., check.names = FALSE): row names were found from a</span></span>
 <span><span class="co">#&gt; short variable and have been discarded</span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:42 Adding adducts to exact masses ... </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:42 ... positive </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:42 ... negative </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:42 ... pure adducts masses ... </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:42 ... positive </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:42 ... negative </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:42 Exporting ... </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:42 ... structure adducts positive </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:45 ... structure adducts negative </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:46 ... adducts masses positive </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:46 ... adducts masses negative </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:46 ... path to used parameters is inst/extdata/interim/config </span></span>
-<span><span class="co">#&gt; 2022-08-18 18:17:46 Script finished in <span style="color: #00BB00;">6.282116 secs</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-08-19 06:27:23 Adding adducts to exact masses ... </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:23 ... positive </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:23 ... negative </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:23 ... pure adducts masses ... </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:23 ... positive </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:23 ... negative </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:23 Exporting ... </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:23 ... structure adducts positive </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:26 ... structure adducts negative </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:26 ... adducts masses positive </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:27 ... adducts masses negative </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:27 ... path to used parameters is inst/extdata/interim/config </span></span>
+<span><span class="co">#&gt; 2022-08-19 06:27:27 Script finished in <span style="color: #00BB00;">21.13418 secs</span></span></span></code></pre></div>
 <p>We now recommend you to read the <a href="https://taxonomicallyinformedannotation.github.io/tima-r/articles/2-formatting.html">next vignette</a>.</p>
 </div>
 
