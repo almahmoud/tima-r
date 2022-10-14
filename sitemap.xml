@@ -43,10 +43,10 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/news/index.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/biological_weighting.html</loc>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/annotate_ms1.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/chemical_weighting.html</loc>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/annotate_non_ms1.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/complement_metadata.html</loc>
@@ -80,12 +80,6 @@
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/ms1_annotation.html</loc>
-  </url>
-  <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/non_ms1_annotation.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_adducts.html</loc>
@@ -127,9 +121,9 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/process_annotations.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/tidyeval.html</loc>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/weight_bio.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/timaR-package.html</loc>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/weight_chemo.html</loc>
   </url>
 </urlset>
