@@ -88,9 +88,10 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.svg" class="logo" alt=""><h1>0 General comments about the infrastructure</h1>
-                        <h4 data-toc-skip class="author">Adriano Rutz</h4>
+                        <h4 data-toc-skip class="author">Adriano
+Rutz</h4>
             
-            <h4 data-toc-skip class="date">2022-10-14</h4>
+            <h4 data-toc-skip class="date">2022-11-03</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/taxonomicallyinformedannotation/tima-r/blob/HEAD/vignettes/I-intro.Rmd" class="external-link"><code>vignettes/I-intro.Rmd</code></a></small>
       <div class="d-none name"><code>I-intro.Rmd</code></div>
@@ -98,36 +99,60 @@
 
     
     
-<p>This vignette describes the philosophy behind the infrastructure of <strong>TIMA</strong>.</p>
+<p>This vignette describes the philosophy behind the infrastructure of
+<strong>TIMA</strong>.</p>
 <div class="section level2">
 <h2 id="philosophy">Philosophy<a class="anchor" aria-label="anchor" href="#philosophy"></a>
 </h2>
-<p>Our main goals were <strong>flexibility</strong> and <strong>reproducibility</strong>.</p>
+<p>Our main goals were <strong>flexibility</strong> and
+<strong>reproducibility</strong>.</p>
 <div class="section level3">
 <h3 id="flexibility">Flexibility<a class="anchor" aria-label="anchor" href="#flexibility"></a>
 </h3>
-<p>To ensure flexibility, we tried to split the process in as much tiny parts as needed. So you can decide whether to skip an optional part, add your own processing, etc. We tried to cover most use cases, but of course they are not exhaustive. If you feel like something useful to other users is missing, please fill an <a href="https://github.com/taxonomicallyinformedannotation/tima-r/issues" class="external-link">issue</a>.</p>
+<p>To ensure flexibility, we tried to split the process in as much tiny
+parts as needed. So you can decide whether to skip an optional part, add
+your own processing, etc. We tried to cover most use cases, but of
+course they are not exhaustive. If you feel like something useful to
+other users is missing, please fill an <a href="https://github.com/taxonomicallyinformedannotation/tima-r/issues" class="external-link">issue</a>.</p>
 </div>
 <div class="section level3">
 <h3 id="reproducibility">Reproducibility<a class="anchor" aria-label="anchor" href="#reproducibility"></a>
 </h3>
-<p>After some time using TIMA, you will probably wonder: “<em>What was the parameters I used to generate this file?</em>” … Or a collaborator might ask you to share your data and parameters. Writing them down each time might be time consuming and not really in line with modern computational approaches. Therefore, we chose to implement all parameters of all steps (almost…) as YAML files. They are human-readable and can be used in batches. If you do not like YAML, parameters of each steps can also be given as command line arguments. They will then be saved as YAML you will be able to share.</p>
+<p>After some time using TIMA, you will probably wonder: “<em>What was
+the parameters I used to generate this file?</em>” … Or a collaborator
+might ask you to share your data and parameters. Writing them down each
+time might be time consuming and not really in line with modern
+computational approaches. Therefore, we chose to implement all
+parameters of all steps (almost…) as YAML files. They are human-readable
+and can be used in batches. If you do not like YAML, parameters of each
+steps can also be given as command line arguments. They will then be
+saved as YAML you will be able to share.</p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="use">Use<a class="anchor" aria-label="anchor" href="#use"></a>
 </h2>
 <p>Each step is detailed in the related <a href="https://taxonomicallyinformedannotation.github.io/tima-r/articles">vignettes</a>.</p>
-<p>All coming steps admit you already cloned the repository and went to its root:</p>
+<p>All coming steps admit you already cloned the repository and went to
+its root:</p>
 <pre><code>git clone https://github.com/taxonomicallyinformedannotation/tima-r.git
 cd tima-r</code></pre>
 <div class="section level3">
 <h3 id="copy-initial-parameters">Copy initial parameters<a class="anchor" aria-label="anchor" href="#copy-initial-parameters"></a>
 </h3>
-<p>As mentioned previously, scripts need some parameters to be filled. Some pre-defined parameters are given in <code>config/default</code> directory. Those will help you understanding how the workflow works so you can adapt them later to your own data. So first, start by copying them into <code>config/params</code> directory. To do so:</p>
+<p>As mentioned previously, scripts need some parameters to be filled.
+Some pre-defined parameters are given in <code>config/default</code>
+directory. Those will help you understanding how the workflow works so
+you can adapt them later to your own data. So first, start by copying
+them into <code>config/params</code> directory. To do so:</p>
 <pre><code>Rscript inst/scripts/prepare_params.R</code></pre>
-<p>You now have all parameters copied in <code>config/params</code> directory, so you can start modifying them according to your own data. This command can be adapted to automatically change the main parameters of the whole workflow. If you are interested into this feature, you’ll probably find out how.</p>
-<p>We now recommend you to read the <a href="https://taxonomicallyinformedannotation.github.io/tima-r/articles/1-library.html">next vignette</a>.</p>
+<p>You now have all parameters copied in <code>config/params</code>
+directory, so you can start modifying them according to your own data.
+This command can be adapted to automatically change the main parameters
+of the whole workflow. If you are interested into this feature, you’ll
+probably find out how.</p>
+<p>We now recommend you to read the <a href="https://taxonomicallyinformedannotation.github.io/tima-r/articles/1-library.html">next
+vignette</a>.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
