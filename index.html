@@ -129,6 +129,14 @@ cd tima-r</code></pre>
 <p>This command will also be useful in case you want to automate your workflow. More details are given in the <a href="https://taxonomicallyinformedannotation.github.io/tima-r/articles/I-intro.html">General comments about the infrastructure</a></p>
 <p>Once done, you can start with an example using:</p>
 <pre class="shell"><code>Rscript inst/scripts/tima.R</code></pre>
+<div class="section level3">
+<h3 id="docker">Docker<a class="anchor" aria-label="anchor" href="#docker"></a>
+</h3>
+<p>A container is also available, together with a small compose. Main commands are below:</p>
+<pre class="shell"><code>docker build . -t tima-r </code></pre>
+<pre class="shell"><code>docker compose up prepare_params
+docker compose up tima</code></pre>
+</div>
 </div>
 <div class="section level2">
 <h2 id="main-citations">Main Citations<a class="anchor" aria-label="anchor" href="#main-citations"></a>
