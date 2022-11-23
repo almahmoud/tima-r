@@ -19,7 +19,7 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/articles/I-intro.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/articles/II-library.html</loc>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/articles/II-inputs.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/articles/III-formatting.html</loc>
@@ -70,6 +70,9 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/get_example_isdb.html</loc>
   </url>
   <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/get_example_mgf.html</loc>
+  </url>
+  <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/get_example_sirius.html</loc>
   </url>
   <url>
@@ -113,6 +116,9 @@
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/process_annotations.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/process_spectra.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/weight_bio.html</loc>
