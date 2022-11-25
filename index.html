@@ -110,32 +110,24 @@
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>As the package is not (yet) available on CRAN, you will need to install the development version, therefore:</p>
-<p>On *nix systems:</p>
-<pre class="shell"><code>Rscript -e 'if(!requireNamespace("remotes")){install.packages("remotes")}
-remotes::install_github("taxonomicallyinformedannotation/tima-r")'</code></pre>
-<p>On Windows:</p>
-<pre class="shell"><code>Rscript -e "if(!requireNamespace('remotes')){install.packages('remotes')}
-remotes::install_github('taxonomicallyinformedannotation/tima-r')"</code></pre>
+<p>On *nix systems: <code>{bash eval=FALSE, include=TRUE} Rscript -e 'if(!requireNamespace("remotes")){install.packages("remotes")} remotes::install_github("taxonomicallyinformedannotation/tima-r")'</code></p>
+<p>On Windows: <code>{bash eval=FALSE, include=TRUE} Rscript -e "if(!requireNamespace('remotes')){install.packages('remotes')} remotes::install_github('taxonomicallyinformedannotation/tima-r')"</code></p>
 <p>or in R directly:</p>
-<pre class="shell"><code><span><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"remotes"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"taxonomicallyinformedannotation/tima-r"</span><span class="op">)</span></span></code></pre>
+<p><code>{r eval=FALSE, include=TRUE} if(!requireNamespace("remotes", quietly = TRUE))     install.packages("remotes") remotes::install_github("taxonomicallyinformedannotation/tima-r")</code></p>
 <p>Once installed, you are ready to go through our <a href="https://taxonomicallyinformedannotation.github.io/tima-r/articles/">documentation</a>, with the major steps detailed.</p>
 <p>Do not forget to clone the repository (it will allow you to access default architecture, files, and parameters):</p>
-<pre class="shell"><code>git clone https://github.com/taxonomicallyinformedannotation/tima-r.git
-cd tima-r</code></pre>
+<p><code>{bash eval=FALSE, include=TRUE} git clone https://github.com/taxonomicallyinformedannotation/tima-r.git cd tima-r</code></p>
 <p>Then, to copy the defaut parameters:</p>
-<pre class="shell"><code>Rscript inst/scripts/prepare_params.R</code></pre>
+<p><code>{bash eval=FALSE, include=TRUE} Rscript inst/scripts/prepare_params.R</code></p>
 <p>This command will also be useful in case you want to automate your workflow. More details are given in the <a href="https://taxonomicallyinformedannotation.github.io/tima-r/articles/I-intro.html">General comments about the infrastructure</a></p>
 <p>Once done, you can start with an example using:</p>
-<pre class="shell"><code>Rscript inst/scripts/tima.R</code></pre>
+<p><code>{bash eval=FALSE, include=TRUE} Rscript inst/scripts/tima.R</code></p>
 <div class="section level3">
 <h3 id="docker">Docker<a class="anchor" aria-label="anchor" href="#docker"></a>
 </h3>
 <p>A container is also available, together with a small compose. Main commands are below:</p>
-<pre class="shell"><code>docker build . -t tima-r </code></pre>
-<pre class="shell"><code>docker compose up prepare_params
-docker compose up tima</code></pre>
+<p><code>{bash eval=FALSE, include=TRUE} docker build . -t tima-r</code></p>
+<p><code>{bash eval=FALSE, include=TRUE} docker compose up prepare_params docker compose up tima</code></p>
 </div>
 </div>
 <div class="section level2">
@@ -145,42 +137,42 @@ docker compose up tima</code></pre>
 <div class="section level3">
 <h3 id="tima">TIMA<a class="anchor" aria-label="anchor" href="#tima"></a>
 </h3>
-<p>General: <a href="https://doi.org/10.3389/fpls.2019.01329" class="external-link">https://doi.org/10.3389/fpls.2019.01329</a></p>
-<p>⚠️ Do not forget to cite which version you used: <a href="https://doi.org/10.5281/zenodo.5797920" class="external-link">https://doi.org/10.5281/zenodo.5797920</a></p>
+<p>General: <a href="https://doi.org/10.3389/fpls.2019.01329" class="external-link uri">https://doi.org/10.3389/fpls.2019.01329</a></p>
+<p>⚠️ Do not forget to cite which version you used: <a href="https://doi.org/10.5281/zenodo.5797920" class="external-link uri">https://doi.org/10.5281/zenodo.5797920</a></p>
 </div>
 <div class="section level3">
 <h3 id="lotus">LOTUS<a class="anchor" aria-label="anchor" href="#lotus"></a>
 </h3>
-<p>General: <a href="https://doi.org/10.7554/eLife.70780" class="external-link">https://doi.org/10.7554/eLife.70780</a></p>
-<p>⚠️ Do not forget to cite which version you used: <a href="https://doi.org/10.5281/zenodo.5794106" class="external-link">https://doi.org/10.5281/zenodo.5794106</a></p>
+<p>General: <a href="https://doi.org/10.7554/eLife.70780" class="external-link uri">https://doi.org/10.7554/eLife.70780</a></p>
+<p>⚠️ Do not forget to cite which version you used: <a href="https://doi.org/10.5281/zenodo.5794106" class="external-link uri">https://doi.org/10.5281/zenodo.5794106</a></p>
 </div>
 <div class="section level3">
 <h3 id="isdb">ISDB<a class="anchor" aria-label="anchor" href="#isdb"></a>
 </h3>
-<p>General: <a href="https://doi.org/10.1021/acs.analchem.5b04804" class="external-link">https://doi.org/10.1021/acs.analchem.5b04804</a></p>
-<p>⚠️ Do not forget to cite which version you used: <a href="https://doi.org/10.5281/zenodo.5607185" class="external-link">https://doi.org/10.5281/zenodo.5607185</a></p>
+<p>General: <a href="https://doi.org/10.1021/acs.analchem.5b04804" class="external-link uri">https://doi.org/10.1021/acs.analchem.5b04804</a></p>
+<p>⚠️ Do not forget to cite which version you used: <a href="https://doi.org/10.5281/zenodo.5607185" class="external-link uri">https://doi.org/10.5281/zenodo.5607185</a></p>
 </div>
 <div class="section level3">
 <h3 id="gnps">GNPS<a class="anchor" aria-label="anchor" href="#gnps"></a>
 </h3>
-<p>General: <a href="https://doi.org/10.1038/nbt.3597" class="external-link">https://doi.org/10.1038/nbt.3597</a></p>
+<p>General: <a href="https://doi.org/10.1038/nbt.3597" class="external-link uri">https://doi.org/10.1038/nbt.3597</a></p>
 </div>
 <div class="section level3">
 <h3 id="sirius">SIRIUS<a class="anchor" aria-label="anchor" href="#sirius"></a>
 </h3>
-<p>General: <a href="https://doi.org/10.1038/s41592-019-0344-8" class="external-link">https://doi.org/10.1038/s41592-019-0344-8</a></p>
+<p>General: <a href="https://doi.org/10.1038/s41592-019-0344-8" class="external-link uri">https://doi.org/10.1038/s41592-019-0344-8</a></p>
 <ul>
 <li>
-<em>CSI:FingerId</em>: <a href="https://www.pnas.org/doi/full/10.1073/pnas.1509788112" class="external-link">https://doi.org/10.1073/pnas.1509788112</a>
+<em>CSI:FingerId</em>: <a href="https://doi.org/10.1073/pnas.1509788112" class="external-link uri">https://doi.org/10.1073/pnas.1509788112</a>
 </li>
 <li>
-<em>ZODIAC</em>: <a href="https://doi.org/10.1038/s42256-020-00234-6" class="external-link">https://doi.org/10.1038/s42256-020-00234-6</a>
+<em>ZODIAC</em>: <a href="https://doi.org/10.1038/s42256-020-00234-6" class="external-link uri">https://doi.org/10.1038/s42256-020-00234-6</a>
 </li>
 <li>
-<em>CANOPUS</em>: <a href="https://doi.org/10.1038/s41587-020-0740-8" class="external-link">https://doi.org/10.1038/s41587-020-0740-8</a>
+<em>CANOPUS</em>: <a href="https://doi.org/10.1038/s41587-020-0740-8" class="external-link uri">https://doi.org/10.1038/s41587-020-0740-8</a>
 </li>
 <li>
-<em>COSMIC</em>: <a href="https://doi.org/10.1038/s41587-021-01045-9" class="external-link">https://doi.org/10.1038/s41587-021-01045-9</a>
+<em>COSMIC</em>: <a href="https://doi.org/10.1038/s41587-021-01045-9" class="external-link uri">https://doi.org/10.1038/s41587-021-01045-9</a>
 </li>
 </ul>
 </div>
@@ -188,9 +180,12 @@ docker compose up tima</code></pre>
 <h3 id="others">Others<a class="anchor" aria-label="anchor" href="#others"></a>
 </h3>
 <ul>
-<li>NPClassifier: <a href="https://pubs.acs.org/doi/10.1021/acs.jnatprod.1c00399" class="external-link">https://doi.org/10.1021/acs.jnatprod.1c00399</a>
+<li>The <em>RforMassSpectrometry</em> packages suite for MS2 matching: [<a href="https://doi.org/10.3390/metabo12020173" class="external-link uri">https://doi.org/10.3390/metabo12020173</a>&gt;</li>
+<li>HMDB 5.0: <a href="https://doi.org/10.1093/nar/gkab1062" class="external-link uri">https://doi.org/10.1093/nar/gkab1062</a>
 </li>
-<li>ROTL: <a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12593" class="external-link">https://doi.org/10.1111/2041-210X.12593</a>
+<li>NPClassifier: <a href="https://doi.org/10.1021/acs.jnatprod.1c00399" class="external-link uri">https://doi.org/10.1021/acs.jnatprod.1c00399</a>
+</li>
+<li>ROTL: <a href="https://doi.org/10.1111/2041-210X.12593" class="external-link uri">https://doi.org/10.1111/2041-210X.12593</a>
 </li>
 </ul>
 </div>

@@ -121,19 +121,19 @@ please follow the following steps.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/process_spectra.R"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; This script <span style="color: #00BB00;">performs spectral similarity calculation. </span></span></span>
-<span><span class="co"><span style="color: #00BB00;">#&gt; </span>2022-11-25 05:49:26 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co"><span style="color: #00BB00;">#&gt; </span>2022-11-25 10:07:44 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:26 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:26 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:26 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:26 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:26 Loading spectra </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:27 Loading spectral library (Can take long) </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:27 Performing spectral comparison </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:28 Formatting results</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:44 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:44 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:44 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:44 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:44 Loading spectra </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:44 Loading spectral library (Can take long) </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:45 Performing spectral comparison </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:46 Formatting results</span></span>
 <span><span class="co">#&gt; Joining, by = "target_id"</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:28 ... path to export is <span style="color: #00BB00;">data/interim/annotations/example_isdb.tsv.gz</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:28 Script finished in <span style="color: #00BB00;">2.234696 secs</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-11-25 10:07:46 ... path to export is <span style="color: #00BB00;">data/interim/annotations/example_isdb.tsv.gz</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:46 Script finished in <span style="color: #00BB00;">2.801976 secs</span></span></span></code></pre></div>
 <p>In case, a python implementation of the spectral matching steps is
 also available at: <a href="https://github.com/mandelbrot-project/spectral_lib_matcher" class="external-link uri">https://github.com/mandelbrot-project/spectral_lib_matcher</a>.
 The python version also includes more elaborated similarity
@@ -151,24 +151,24 @@ as the provided examples.</p>
 <p>As SIRIUS jobs are long to perform, we provide an already computed
 SIRIUS Workspace. It has beeen generated on the same MGF as the GNPS and
 ISDB jobs with the following command:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>config <span class="sc">--</span>IsotopeSettings.filter true <span class="sc">--</span>FormulaSearchDB BIO,COCONUT,GNPS,KNAPSACK,UNDP,PLANTCYC <span class="sc">--</span>Timeout.secondsPerTree <span class="dv">0</span> <span class="sc">--</span>FormulaSettings.enforced HCNOP <span class="sc">--</span>Timeout.secondsPerInstance <span class="dv">0</span> <span class="sc">--</span>AdductSettings.detectable [[M <span class="sc">+</span> H3N <span class="sc">+</span> H]<span class="sc">+</span>, [M <span class="sc">-</span> H2O <span class="sc">+</span> H]<span class="sc">+</span>, [M <span class="sc">+</span> K]<span class="sc">+</span>, [M <span class="sc">-</span> H4O2 <span class="sc">+</span> H]<span class="sc">+</span>, [M <span class="sc">+</span> H]<span class="sc">+</span>, [M <span class="sc">+</span> Na]<span class="sc">+</span>] <span class="sc">--</span>UseHeuristic.mzToUseHeuristicOnly <span class="dv">650</span> <span class="sc">--</span>AlgorithmProfile orbitrap <span class="sc">--</span>IsotopeMs2Settings IGNORE <span class="sc">--</span>MS2MassDeviation.allowedMassDeviation <span class="fl">5.0</span>ppm <span class="sc">--</span>NumberOfCandidatesPerIon <span class="dv">1</span> <span class="sc">--</span>UseHeuristic.mzToUseHeuristic <span class="dv">300</span> <span class="sc">--</span>FormulaSettings.detectable B,Cl,Br,Se,S <span class="sc">--</span>NumberOfCandidates <span class="dv">10</span> <span class="sc">--</span>ZodiacNumberOfConsideredCandidatesAt300Mz <span class="dv">10</span> <span class="sc">--</span>ZodiacRunInTwoSteps true <span class="sc">--</span>ZodiacEdgeFilterThresholds.minLocalConnections <span class="dv">10</span> <span class="sc">--</span>ZodiacEdgeFilterThresholds.thresholdFilter <span class="fl">0.95</span> <span class="sc">--</span>ZodiacEpochs.burnInPeriod <span class="dv">2000</span> <span class="sc">--</span>ZodiacEpochs.numberOfMarkovChains <span class="dv">10</span> <span class="sc">--</span>ZodiacNumberOfConsideredCandidatesAt800Mz <span class="dv">50</span> <span class="sc">--</span>ZodiacEpochs.iterations <span class="dv">20000</span> <span class="sc">--</span>AdductSettings.enforced , <span class="sc">--</span>AdductSettings.fallback [[M <span class="sc">+</span> K]<span class="sc">+</span>, [M <span class="sc">+</span> H]<span class="sc">+</span>, [M <span class="sc">+</span> Na]<span class="sc">+</span>] <span class="sc">--</span>FormulaResultThreshold true <span class="sc">--</span>InjectElGordoCompounds true <span class="sc">--</span>StructureSearchDB BIO,COCONUT,GNPS,KNAPSACK,UNDP,PLANTCYC <span class="sc">--</span>RecomputeResults false formula zodiac fingerprint structure canopus</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">config</span> <span class="at">--IsotopeSettings.filter</span> true <span class="at">--FormulaSearchDB</span> BIO,COCONUT,GNPS,KNAPSACK,UNDP,PLANTCYC <span class="at">--Timeout.secondsPerTree</span> 0 <span class="at">--FormulaSettings.enforced</span> HCNOP <span class="at">--Timeout.secondsPerInstance</span> 0 <span class="at">--AdductSettings.detectable</span> [[M + H3N + H]+, [M <span class="at">-</span> H2O + H]+, [M + K]+, [M <span class="at">-</span> H4O2 + H]+, [M + H]+, [M + Na]+] <span class="at">--UseHeuristic.mzToUseHeuristicOnly</span> 650 <span class="at">--AlgorithmProfile</span> orbitrap <span class="at">--IsotopeMs2Settings</span> IGNORE <span class="at">--MS2MassDeviation.allowedMassDeviation</span> 5.0ppm <span class="at">--NumberOfCandidatesPerIon</span> 1 <span class="at">--UseHeuristic.mzToUseHeuristic</span> 300 <span class="at">--FormulaSettings.detectable</span> B,Cl,Br,Se,S <span class="at">--NumberOfCandidates</span> 10 <span class="at">--ZodiacNumberOfConsideredCandidatesAt300Mz</span> 10 <span class="at">--ZodiacRunInTwoSteps</span> true <span class="at">--ZodiacEdgeFilterThresholds.minLocalConnections</span> 10 <span class="at">--ZodiacEdgeFilterThresholds.thresholdFilter</span> 0.95 <span class="at">--ZodiacEpochs.burnInPeriod</span> 2000 <span class="at">--ZodiacEpochs.numberOfMarkovChains</span> 10 <span class="at">--ZodiacNumberOfConsideredCandidatesAt800Mz</span> 50 <span class="at">--ZodiacEpochs.iterations</span> 20000 <span class="at">--AdductSettings.enforced</span> , <span class="at">--AdductSettings.fallback</span> [[M + K]+, [M + H]+, [M + Na]+] <span class="at">--FormulaResultThreshold</span> true <span class="at">--InjectElGordoCompounds</span> true <span class="at">--StructureSearchDB</span> BIO,COCONUT,GNPS,KNAPSACK,UNDP,PLANTCYC <span class="at">--RecomputeResults</span> false formula zodiac fingerprint structure canopus</span></code></pre></div>
 <p>These parameters were not optimized and were only used to give an
 example output.</p>
 <p>Then, the summaries have been generated using:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sirius <span class="sc">-</span>i inst<span class="sc">/</span>extdata<span class="sc">/</span>interim<span class="sc">/</span>annotations<span class="sc">/</span>sirius_example<span class="sc">/</span> write<span class="sc">-</span>summaries <span class="sc">-</span>c <span class="sc">--</span>digits <span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sirius</span> <span class="at">-i</span> inst/extdata/interim/annotations/sirius_example/ write-summaries <span class="at">-c</span> <span class="at">--digits</span> 3</span></code></pre></div>
 <p>You can get the example running:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/get_example_sirius.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:29 This script <span style="color: #00BB00;">downloads an example of SIRIUS output. </span></span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:47 This script <span style="color: #00BB00;">downloads an example of SIRIUS output. </span></span></span>
 <span><span class="co"><span style="color: #00BB00;">#&gt; </span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:29 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:47 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:29 Contributors: ...</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:47 Contributors: ...</span></span>
 <span><span class="co">#&gt; Timeout for download is 600 seconds</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:49:29 Loading paths</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:07:47 Loading paths</span></span>
 <span><span class="co">#&gt; Downloading</span></span>
 <span><span class="co">#&gt; Unzipping</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:50:43 Script finished in <span style="color: #00BB00;">1.247891 mins</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-11-25 10:09:04 Script finished in <span style="color: #00BB00;">1.283573 mins</span></span></span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="gnps">GNPS<a class="anchor" aria-label="anchor" href="#gnps"></a>
@@ -186,15 +186,15 @@ example output.</p>
 using:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/prepare_gnps.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:50:43 This script <span style="color: #00BB00;">formats GNPS (and NAP) results</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:50:43 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:09:04 This script <span style="color: #00BB00;">formats GNPS (and NAP) results</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:09:04 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:50:43 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:50:43 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:50:44 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:50:44 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:50:44 Loading and formatting GNPS results </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:50:44 Trying to look for already computed metadata</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:09:04 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:09:04 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:09:04 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:09:04 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:09:04 Loading and formatting GNPS results </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:09:04 Trying to look for already computed metadata</span></span>
 <span><span class="co">#&gt; Downloading structure_metadata.tsv.gz from https://doi.org/10.5281/zenodo.6378223 (The LOTUS Initiative for Open Natural Products Research: metadata; version: 4)</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">529177</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">4</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
@@ -213,22 +213,22 @@ using:</p>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
 <span><span class="co">#&gt; Joining, by = "inchikey_2D"</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:43 Exporting ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:43 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:43 ... path to export is <span style="color: #00BB00;">data/interim/annotations/96fa7c88200e4a03bee4644e581e3fb0_gnps_pretreated.tsv.gz</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:43 Script finished in <span style="color: #00BB00;">1.999269 mins</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-11-25 10:13:57 Exporting ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:13:57 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:13:57 ... path to export is <span style="color: #00BB00;">data/interim/annotations/96fa7c88200e4a03bee4644e581e3fb0_gnps_pretreated.tsv.gz</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:13:57 Script finished in <span style="color: #00BB00;">4.886128 mins</span></span></span></code></pre></div>
 <p>and/or</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/prepare_isdb.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:44 This script <span style="color: #00BB00;">formats ISDB results</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:44 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:13:57 This script <span style="color: #00BB00;">formats ISDB results</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:13:57 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:44 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:44 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:44 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:44 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:44 Loading and formatting ISDB results </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:44 Trying to look for already computed metadata</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:13:57 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:13:57 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:13:57 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:13:57 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:13:57 Loading and formatting ISDB results </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:13:57 Trying to look for already computed metadata</span></span>
 <span><span class="co">#&gt; A file with the same size is already present. Skipping</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">529177</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">4</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
@@ -247,21 +247,21 @@ using:</p>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
 <span><span class="co">#&gt; Joining, by = "inchikey_2D"</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:51 Exporting ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:51 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:51 ... path to export is <span style="color: #00BB00;">data/interim/annotations/96fa7c88200e4a03bee4644e581e3fb0_isdb_pretreated.tsv.gz</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:51 Script finished in <span style="color: #00BB00;">7.236481 secs</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-11-25 10:14:02 Exporting ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:14:02 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:14:02 ... path to export is <span style="color: #00BB00;">data/interim/annotations/96fa7c88200e4a03bee4644e581e3fb0_isdb_pretreated.tsv.gz</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:14:02 Script finished in <span style="color: #00BB00;">4.58389 secs</span></span></span></code></pre></div>
 <p>and/or</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/prepare_sirius.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:51 This script <span style="color: #00BB00;">formats SIRIUS results</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:51 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:14:02 This script <span style="color: #00BB00;">formats SIRIUS results</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:14:02 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:51 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:51 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:51 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:51 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:52:54 Loading and formatting SIRIUS results</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:14:02 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:14:02 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:14:02 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:14:02 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:14:04 Loading and formatting SIRIUS results</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">5070</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">20</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -302,7 +302,7 @@ using:</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:15 Trying to look for already computed metadata</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:17:48 Trying to look for already computed metadata</span></span>
 <span><span class="co">#&gt; A file with the same size is already present. Skipping</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">529177</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">4</span><span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -310,10 +310,10 @@ using:</p>
 <span><span class="co">#&gt; <span style="color: #00BB00;">dbl</span> (1): structureCleaned_exactMass</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.Joining, by = c("feature_id", "molecular_formula")Joining, by = "feature_id"Joining, by = "inchikey_2D"</span></span>
-<span><span class="co">#&gt; Warning: 9711 features have no exact mass. This is somehow unexpected and under investigation.2022-11-25 05:57:24 Exporting ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:24 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:24 ... path to export is <span style="color: #00BB00;">data/interim/annotations/96fa7c88200e4a03bee4644e581e3fb0_sirius_pretreated.tsv.gz</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:27 Script finished in <span style="color: #00BB00;">4.606129 mins</span></span></span></code></pre></div>
+<span><span class="co">#&gt; Warning: 9711 features have no exact mass. This is somehow unexpected and under investigation.2022-11-25 10:18:00 Exporting ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:00 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:00 ... path to export is <span style="color: #00BB00;">data/interim/annotations/96fa7c88200e4a03bee4644e581e3fb0_sirius_pretreated.tsv.gz</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:04 Script finished in <span style="color: #00BB00;">4.044363 mins</span></span></span></code></pre></div>
 <p>You now have your annotations well prepared and can keep on
 formatting the rest of your metadata.</p>
 </div>
@@ -343,12 +343,12 @@ next steps. However, this will not help chemical weighting.</p>
 should look like by running (no parameters needed):</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/get_example_feature_table.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:27 This script <span style="color: #00BB00;">downloads an example of minimal feature table </span></span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:04 This script <span style="color: #00BB00;">downloads an example of minimal feature table </span></span></span>
 <span><span class="co"><span style="color: #00BB00;">#&gt; </span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:27 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:04 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:27 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:27 Loading paths</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:04 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:04 Loading paths</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">7897</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">3</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -356,7 +356,7 @@ should look like by running (no parameters needed):</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:30 Script finished in <span style="color: #00BB00;">2.323692 secs</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-11-25 10:18:06 Script finished in <span style="color: #00BB00;">1.93486 secs</span></span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="formatting-1">Formatting<a class="anchor" aria-label="anchor" href="#formatting-1"></a>
@@ -368,14 +368,14 @@ should look like by running (no parameters needed):</p>
 accordingly.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/prepare_edges.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:30 This script <span style="color: #00BB00;">prepares edges</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:30 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:06 This script <span style="color: #00BB00;">prepares edges</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:06 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:30 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:30 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:30 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:30 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:30 Loading edge table</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:06 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:06 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:06 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:06 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:06 Loading edge table</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">14453</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">8</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -384,22 +384,22 @@ accordingly.</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 Formatting edge table </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 Exporting ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 ... path to export is <span style="color: #00BB00;">data/interim/edges/96fa7c88200e4a03bee4644e581e3fb0_edges.tsv.gz</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 Script finished in <span style="color: #00BB00;">0.9113309 secs</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-11-25 10:18:07 Formatting edge table </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:07 Exporting ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:07 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:07 ... path to export is <span style="color: #00BB00;">data/interim/edges/96fa7c88200e4a03bee4644e581e3fb0_edges.tsv.gz</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:07 Script finished in <span style="color: #00BB00;">0.966851 secs</span></span></span></code></pre></div>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/prepare_features_components.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 This script <span style="color: #00BB00;">prepares features metadata (mz, rt and component id)</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:07 This script <span style="color: #00BB00;">prepares features metadata (mz, rt and component id)</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:07 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 Loading files ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 ... features table</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:07 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:07 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:08 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:08 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:08 Loading files ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:08 ... features table</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">22</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">12</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -409,8 +409,8 @@ accordingly.</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 ... cluster table </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:31 THIS STEP CAN BE IMPROVED BY CALCULATING THE CLUSTERS WITHIN SPEC2VEC</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:08 ... cluster table </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:08 THIS STEP CAN BE IMPROVED BY CALCULATING THE CLUSTERS WITHIN SPEC2VEC</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">7897</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">32</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -419,24 +419,24 @@ accordingly.</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 Adding components to features</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 Adding components to features</span></span>
 <span><span class="co">#&gt; Joining, by = "feature_id"</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 Calculating mz error </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 Exporting ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 ... path to export is <span style="color: #00BB00;">data/interim/annotations/96fa7c88200e4a03bee4644e581e3fb0_isdb_filled.tsv.gz</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 Script finished in <span style="color: #00BB00;">2.947068 secs</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 Calculating mz error </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 Exporting ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 ... path to export is <span style="color: #00BB00;">data/interim/annotations/96fa7c88200e4a03bee4644e581e3fb0_isdb_filled.tsv.gz</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 Script finished in <span style="color: #00BB00;">2.668798 secs</span></span></span></code></pre></div>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/prepare_features_classification.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 This script <span style="color: #00BB00;">prepares features metadata (chemical classes)</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 This script <span style="color: #00BB00;">prepares features metadata (chemical classes)</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 Authors:  <span style="color: #00BB00;">AR</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 Loading files ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:34 ... library</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 Loading files ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:10 ... library</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">779214</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">7</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -445,7 +445,7 @@ accordingly.</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:37 ... features table</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:15 ... features table</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">7899</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">14</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -455,37 +455,37 @@ accordingly.</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:37 Filtering structures ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:37 ... missing classification </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:37 ... missing masses </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:37 ... missing formulas </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:37 ... keeping the other ones safe</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:15 Filtering structures ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:15 ... missing classification </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:15 ... missing masses </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:15 ... missing formulas </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:15 ... keeping the other ones safe</span></span>
 <span><span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D")</span></span>
 <span><span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D")</span></span>
 <span><span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D")</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:37 Completing the structures with the library</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:15 Completing the structures with the library</span></span>
 <span><span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D")</span></span>
 <span><span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D")</span></span>
 <span><span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D")</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 Filtering structures again (to calculate this time) ...</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 Filtering structures again (to calculate this time) ...</span></span>
 <span><span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D",</span></span>
 <span><span class="co">#&gt; "structure_taxonomy_npclassifier_01pathway",</span></span>
 <span><span class="co">#&gt; "structure_taxonomy_npclassifier_02superclass",</span></span>
 <span><span class="co">#&gt; "structure_taxonomy_npclassifier_03class")</span></span>
 <span><span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D", "structure_exact_mass")</span></span>
 <span><span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D", "molecular_formula")</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 Calculation is not performed yet (TODO) ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 Recombining everything back together</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 Calculation is not performed yet (TODO) ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 Recombining everything back together</span></span>
 <span><span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D",</span></span>
 <span><span class="co">#&gt; "structure_taxonomy_npclassifier_01pathway",</span></span>
 <span><span class="co">#&gt; "structure_taxonomy_npclassifier_02superclass",</span></span>
 <span><span class="co">#&gt; "structure_taxonomy_npclassifier_03class")</span></span>
 <span><span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D", "molecular_formula")</span></span>
 <span><span class="co">#&gt; Joining, by = c("inchikey_2D", "smiles_2D", "structure_exact_mass")</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 Exporting ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 ... path to export is <span style="color: #00BB00;">data/interim/annotations/96fa7c88200e4a03bee4644e581e3fb0_isdb_treated.tsv.gz</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 Script finished in <span style="color: #00BB00;">4.22695 secs</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 Exporting ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 ... path to export is <span style="color: #00BB00;">data/interim/annotations/96fa7c88200e4a03bee4644e581e3fb0_isdb_treated.tsv.gz</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 Script finished in <span style="color: #00BB00;">5.588052 secs</span></span></span></code></pre></div>
 <p>Your features are now not only informed with structural information
 but also, chemical class information. The latter might be corresponding
 <strong>or not</strong> to the chemical class of your annotated
@@ -507,14 +507,14 @@ your GNPS job ID.</p>
 <code>config/params/prepare_taxa.yaml</code>.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/prepare_taxa.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 This script <span style="color: #00BB00;">informs taxonomically features</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 Authors:  <span style="color: #00BB00;">AR</span> , <span style="color: #0000BB;">PMA</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 This script <span style="color: #00BB00;">informs taxonomically features</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 Authors:  <span style="color: #00BB00;">AR</span> , <span style="color: #0000BB;">PMA</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 Loading taxa ranks dictionary</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 Loading taxa ranks dictionary</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">17</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">2</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -522,7 +522,7 @@ your GNPS job ID.</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:38 Loading feature table</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:16 Loading feature table</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">7897</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">9</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> ","</span></span>
@@ -530,7 +530,7 @@ your GNPS job ID.</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:39 Loading metadata table</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:17 Loading metadata table</span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">6</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">2</span></span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
 <span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> "\t"</span></span>
@@ -538,18 +538,18 @@ your GNPS job ID.</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:39 Formatting feature table ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:39 ... WARNING: requires 'Peak area' in columns (MZmine format) </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:39 ... filtering top K intensities per feature </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:40 Keeping list of organisms to submit to OTL</span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:17 Formatting feature table ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:17 ... WARNING: requires 'Peak area' in columns (MZmine format) </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:17 ... filtering top K intensities per feature </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:18 Keeping list of organisms to submit to OTL</span></span>
 <span><span class="co">#&gt; Warning: BLK are not matched</span></span>
 <span><span class="co">#&gt; Joining, by = "search_string"</span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:41 Joining top K with metadata table </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:41 Joining with cleaned taxonomy table </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:42 Exporting ... </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:42 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:42 ... path to export is <span style="color: #00BB00;">data/interim/taxa/96fa7c88200e4a03bee4644e581e3fb0_taxed.tsv.gz</span> </span></span>
-<span><span class="co">#&gt; 2022-11-25 05:57:43 Script finished in <span style="color: #00BB00;">4.415815 secs</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-11-25 10:18:19 Joining top K with metadata table </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:19 Joining with cleaned taxonomy table </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:21 Exporting ... </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:21 ... path to used parameters is <span style="color: #00BB00;">data/interim/config</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:21 ... path to export is <span style="color: #00BB00;">data/interim/taxa/96fa7c88200e4a03bee4644e581e3fb0_taxed.tsv.gz</span> </span></span>
+<span><span class="co">#&gt; 2022-11-25 10:18:21 Script finished in <span style="color: #00BB00;">5.177269 secs</span></span></span></code></pre></div>
 <p>We now recommend you to read the <a href="https://taxonomicallyinformedannotation.github.io/tima-r/articles/IV-processing.html">next
 vignette</a>.</p>
 </div>

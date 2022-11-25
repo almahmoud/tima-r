@@ -135,8 +135,8 @@ saved as YAML you will be able to share.</p>
 <p>Each step is detailed in the related <a href="https://taxonomicallyinformedannotation.github.io/tima-r/articles">vignettes</a>.</p>
 <p>All coming steps admit you already cloned the repository and went to
 its root:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git clone https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>taxonomicallyinformedannotation<span class="sc">/</span>tima<span class="sc">-</span>r.git</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>cd tima<span class="sc">-</span>r</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/taxonomicallyinformedannotation/tima-r.git</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> tima-r</span></code></pre></div>
 <div class="section level3">
 <h3 id="copy-initial-parameters">Copy initial parameters<a class="anchor" aria-label="anchor" href="#copy-initial-parameters"></a>
 </h3>
@@ -145,7 +145,7 @@ Some pre-defined parameters are given in <code>config/default</code>
 directory. Those will help you understanding how the workflow works so
 you can adapt them later to your own data. So first, start by copying
 them into <code>config/params</code> directory. To do so:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Rscript inst<span class="sc">/</span>scripts<span class="sc">/</span>prepare_params.R</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> inst/scripts/prepare_params.R</span></code></pre></div>
 <p>You now have all parameters copied in <code>config/params</code>
 directory, so you can start modifying them according to your own data.
 This command can be adapted to automatically change the main parameters
