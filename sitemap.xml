@@ -103,9 +103,6 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_gnps.html</loc>
   </url>
   <url>
-    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_isdb.html</loc>
-  </url>
-  <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_library.html</loc>
   </url>
   <url>
@@ -116,6 +113,9 @@
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_sirius.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_spectral_matches.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_taxa.html</loc>
