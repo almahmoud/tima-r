@@ -1,5 +1,5 @@
 pandoc: 2.19.2
-pkgdown: 2.0.6
+pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   I-intro: I-intro.html
@@ -7,7 +7,7 @@ articles:
   III-formatting: III-formatting.html
   IV-processing: IV-processing.html
   V-actual-performance: V-actual-performance.html
-last_built: 2022-12-16T14:08Z
+last_built: 2022-12-17T10:50Z
 urls:
   reference: https://taxonomicallyinformedannotation.github.io/tima-r/reference
   article: https://taxonomicallyinformedannotation.github.io/tima-r/articles
