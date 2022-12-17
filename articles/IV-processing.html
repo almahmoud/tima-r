@@ -109,23 +109,23 @@ successfully, this should be a piece of cake, you deserve it!</p>
 <code>config/params/process_annotations.yaml</code>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/process_annotations.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2022-12-17 10:59:44 This script performs <span style="color: #00BB00;">taxonomically informed scoring</span> preceded by <span style="color: #0000BB;">MS1 annotation</span> and followed by <span style="color: #BBBB00;">chemical consistency informed scoring</span> </span></span>
-<span><span class="co">#&gt; 2022-12-17 10:59:44 Authors:  <span style="color: #00BB00;">AR</span> , <span style="color: #0000BB;">PMA</span> </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:54:34 This script performs <span style="color: #00BB00;">taxonomically informed scoring</span> preceded by <span style="color: #0000BB;">MS1 annotation</span> and followed by <span style="color: #BBBB00;">chemical consistency informed scoring</span> </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:54:34 Authors:  <span style="color: #00BB00;">AR</span> , <span style="color: #0000BB;">PMA</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2022-12-17 10:59:44 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2022-12-17 10:59:44 Loading paths </span></span>
-<span><span class="co">#&gt; 2022-12-17 10:59:45 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2022-12-17 10:59:45 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2022-12-17 10:59:45 ... files ... </span></span>
-<span><span class="co">#&gt; 2022-12-17 10:59:45 ... annotations </span></span>
-<span><span class="co">#&gt; 2022-12-17 10:59:45 ... metadata_table_biological_annotation </span></span>
-<span><span class="co">#&gt; 2022-12-17 10:59:45 ... edges table </span></span>
-<span><span class="co">#&gt; 2022-12-17 10:59:45 ... structure-organism pairs table </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:00:12 ... single charge adducts table </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:00:12 ... adducts masses for in source dimers and multicharged </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:00:12 ... neutral lossses </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:00:12 ... exact masses for MS1 annotation </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:00:13 performing MS1 annotation </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:54:34 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:54:34 Loading paths </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:54:34 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:54:34 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:54:34 ... files ... </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:54:34 ... annotations </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:54:35 ... metadata_table_biological_annotation </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:54:35 ... edges table </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:54:35 ... structure-organism pairs table </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:55:23 ... single charge adducts table </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:55:23 ... adducts masses for in source dimers and multicharged </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:55:24 ... neutral lossses </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:55:24 ... exact masses for MS1 annotation </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:55:25 performing MS1 annotation </span></span>
 <span><span class="co">#&gt; filtering desired adducts and adding mz tolerance </span></span>
 <span><span class="co">#&gt; setting to data.table format for faster performance </span></span>
 <span><span class="co">#&gt; adding rt tolerance ... </span></span>
@@ -162,8 +162,8 @@ successfully, this should be a piece of cake, you deserve it!</p>
 <span><span class="co">#&gt;  <span style="color: #00BB00;">1811489</span> <span style="color: #00BB00;">annotations</span> , on </span></span>
 <span><span class="co">#&gt;  <span style="color: #0000BB;">7897</span> <span style="color: #0000BB;">features</span> , of which </span></span>
 <span><span class="co">#&gt;  <span style="color: #BBBB00;">7872</span> were <span style="color: #BBBB00;">not previously annotated. </span></span></span>
-<span><span class="co"><span style="color: #BBBB00;">#&gt; </span>2022-12-17 11:00:46 adding biological organism metadata </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:00:49 performing taxonomically informed scoring </span></span>
+<span><span class="co"><span style="color: #BBBB00;">#&gt; </span>2022-12-17 12:56:38 adding biological organism metadata </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:56:46 performing taxonomically informed scoring </span></span>
 <span><span class="co">#&gt; normalizing initial score </span></span>
 <span><span class="co">#&gt; selecting DB columns </span></span>
 <span><span class="co">#&gt; keeping distinct candidates per taxonomical rank </span></span>
@@ -182,15 +182,15 @@ successfully, this should be a piece of cake, you deserve it!</p>
 <span><span class="co">#&gt; joining with initial results </span></span>
 <span><span class="co">#&gt; adding "notClassified" </span></span>
 <span><span class="co">#&gt; taxonomically informed scoring led to </span></span>
-<span><span class="co">#&gt;  <span style="color: #555555;">1241834</span> annotations reranked at the <span style="color: #555555;">kingdom</span> level, </span></span>
-<span><span class="co">#&gt;  <span style="color: #BBBBBB;">1229127</span> annotations reranked at the <span style="color: #BBBBBB;">phylum</span> level, </span></span>
-<span><span class="co">#&gt;  <span style="color: #00BBBB;">949951</span> annotations reranked at the <span style="color: #00BBBB;">class</span> level, </span></span>
-<span><span class="co">#&gt;  <span style="color: #BB00BB;">153904</span> annotations reranked at the <span style="color: #BB00BB;">order</span> level, </span></span>
-<span><span class="co">#&gt;  <span style="color: #0000BB;">125933</span> annotations reranked at the <span style="color: #0000BB;">family</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #555555;">1241831</span> annotations reranked at the <span style="color: #555555;">kingdom</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBBBB;">1229124</span> annotations reranked at the <span style="color: #BBBBBB;">phylum</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #00BBBB;">949950</span> annotations reranked at the <span style="color: #00BBBB;">class</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #BB00BB;">153903</span> annotations reranked at the <span style="color: #BB00BB;">order</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #0000BB;">125932</span> annotations reranked at the <span style="color: #0000BB;">family</span> level, </span></span>
 <span><span class="co">#&gt;  <span style="color: #BBBB00;">12914</span> annotations reranked at the <span style="color: #BBBB00;">genus</span> level, </span></span>
 <span><span class="co">#&gt;  <span style="color: #00BB00;">2978</span> annotations reranked at the <span style="color: #00BB00;">species</span> level, </span></span>
 <span><span class="co">#&gt;  and <span style="color: #BB0000;">0</span> annotations reranked at the <span style="color: #BB0000;">variety</span> level. </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:02:08 cleaning taxonomically informed results and preparing for chemically informed scoring </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:59:10 cleaning taxonomically informed results and preparing for chemically informed scoring </span></span>
 <span><span class="co">#&gt; keeping only MS1 candidates with minimum </span></span>
 <span><span class="co">#&gt;  0.5  biological score </span></span>
 <span><span class="co">#&gt; erasing other MS1 candidates </span></span>
@@ -206,7 +206,7 @@ successfully, this should be a piece of cake, you deserve it!</p>
 <span><span class="co">#&gt; joining all except -1 together </span></span>
 <span><span class="co">#&gt; adding dummy consistency for features with less than 2 neighbors </span></span>
 <span><span class="co">#&gt; binding results together </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:02:20 performing chemically informed scoring </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:59:35 performing chemically informed scoring </span></span>
 <span><span class="co">#&gt; calculating chemical score ... </span></span>
 <span><span class="co">#&gt; ... adding metadata </span></span>
 <span><span class="co">#&gt; ... pathway </span></span>
@@ -216,10 +216,10 @@ successfully, this should be a piece of cake, you deserve it!</p>
 <span><span class="co">#&gt; ... joining </span></span>
 <span><span class="co">#&gt; ... cleaning </span></span>
 <span><span class="co">#&gt; chemically informed scoring led to </span></span>
-<span><span class="co">#&gt;  <span style="color: #0000BB;">30759</span> annotations reranked at the <span style="color: #0000BB;">pathway</span> level, </span></span>
-<span><span class="co">#&gt;  <span style="color: #BBBB00;">20474</span> annotations reranked at the <span style="color: #BBBB00;">superclass</span> level, and </span></span>
-<span><span class="co">#&gt;  <span style="color: #00BB00;">4907</span> annotations reranked at the <span style="color: #00BB00;">class</span> level. </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:02:33 cleaning for cytoscape export </span></span>
+<span><span class="co">#&gt;  <span style="color: #0000BB;">30723</span> annotations reranked at the <span style="color: #0000BB;">pathway</span> level, </span></span>
+<span><span class="co">#&gt;  <span style="color: #BBBB00;">20446</span> annotations reranked at the <span style="color: #BBBB00;">superclass</span> level, and </span></span>
+<span><span class="co">#&gt;  <span style="color: #00BB00;">4904</span> annotations reranked at the <span style="color: #00BB00;">class</span> level. </span></span>
+<span><span class="co">#&gt; 2022-12-17 12:59:56 cleaning for cytoscape export </span></span>
 <span><span class="co">#&gt; filtering top  3  candidates and keeping only MS1 candidates with minimum </span></span>
 <span><span class="co">#&gt;  0.5  biological score or </span></span>
 <span><span class="co">#&gt;  0.666 chemical score </span></span>
@@ -227,10 +227,10 @@ successfully, this should be a piece of cake, you deserve it!</p>
 <span><span class="co">#&gt; adding structures metadata </span></span>
 <span><span class="co">#&gt; selecting columns for cytoscape output </span></span>
 <span><span class="co">#&gt; summarizing results </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:03:29 Exporting ... </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:03:29 ... path to used parameters is <span style="color: #00BB00;">data/processed/221217_110329</span> </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:03:29 ... path to export is <span style="color: #00BB00;">data/processed/221217_110329/FinalResults.tsv</span> </span></span>
-<span><span class="co">#&gt; 2022-12-17 11:03:29 Script finished in <span style="color: #00BB00;">3.745488 mins</span></span></span></code></pre></div>
+<span><span class="co">#&gt; 2022-12-17 13:01:36 Exporting ... </span></span>
+<span><span class="co">#&gt; 2022-12-17 13:01:36 ... path to used parameters is <span style="color: #00BB00;">data/processed/221217_130136</span> </span></span>
+<span><span class="co">#&gt; 2022-12-17 13:01:36 ... path to export is <span style="color: #00BB00;">data/processed/221217_130136/FinalResults.tsv</span> </span></span>
+<span><span class="co">#&gt; 2022-12-17 13:01:36 Script finished in <span style="color: #00BB00;">7.046441 mins</span></span></span></code></pre></div>
 <p>The final exported file is formatted in order to be easily imported
 in <a href="https://cytoscape.org/" class="external-link">Cytoscape</a> to further explore
 your data!</p>
