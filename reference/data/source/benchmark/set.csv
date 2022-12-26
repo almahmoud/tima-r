@@ -6,19 +6,19 @@
 "<meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">"
 <title></title>
 <noscript>
-"<meta http-equiv=""refresh"" content=""0;url=http://myurl.com/mtm/direct/.eJwliksKgDAMBe-SZZF272WkhvhB08prK4h4dyPuZoa5qWGlnsIoiReN2DyXkzqKmIt1I8gkEPyy5FKHFFVM9WrYPWf9dmY5qkUXHD0vsMwbBg:1p9ohQ:NBsYksgSdV94e-oZJo4YEsfyyGM/2"" />"
+"<meta http-equiv=""refresh"" content=""0;url=http://myurl.com/mtm/direct/.eJwliksKgDAMBe-SZZF272WkhvhB08prK4h4dyPuZoa5qWGlnsIoiReN2DyXkzqKmIt1I8gkEPyy5FKHFFVM9WrYPWf9dmY5qkUXHD0vsMwbBg:1p9orc:U6_1sZEgBlPvcnosR5b39Wes2i0/2"" />"
 </noscript>
-"<meta http-equiv=""refresh"" content=""35;url=http://myurl.com/mtm/direct/.eJwliksKgDAMBe-SZZF272WkhvhB08prK4h4dyPuZoa5qWGlnsIoiReN2DyXkzqKmIt1I8gkEPyy5FKHFFVM9WrYPWf9dmY5qkUXHD0vsMwbBg:1p9ohQ:NBsYksgSdV94e-oZJo4YEsfyyGM/0"" />"
+"<meta http-equiv=""refresh"" content=""35;url=http://myurl.com/mtm/direct/.eJwliksKgDAMBe-SZZF272WkhvhB08prK4h4dyPuZoa5qWGlnsIoiReN2DyXkzqKmIt1I8gkEPyy5FKHFFVM9WrYPWf9dmY5qkUXHD0vsMwbBg:1p9orc:U6_1sZEgBlPvcnosR5b39Wes2i0/0"" />"
 </head>
 "<body onload=""do_onload()"">"
 "<script type=""text/javascript"">"
 function tmr(path) {
 return function() {
-"window.top.location.href = ""http://myurl.com/mtm/direct/.eJwliksKgDAMBe-SZZF272WkhvhB08prK4h4dyPuZoa5qWGlnsIoiReN2DyXkzqKmIt1I8gkEPyy5FKHFFVM9WrYPWf9dmY5qkUXHD0vsMwbBg:1p9ohQ:NBsYksgSdV94e-oZJo4YEsfyyGM/"" + path + ""/"";"
+"window.top.location.href = ""http://myurl.com/mtm/direct/.eJwliksKgDAMBe-SZZF272WkhvhB08prK4h4dyPuZoa5qWGlnsIoiReN2DyXkzqKmIt1I8gkEPyy5FKHFFVM9WrYPWf9dmY5qkUXHD0vsMwbBg:1p9orc:U6_1sZEgBlPvcnosR5b39Wes2i0/"" + path + ""/"";"
 }
 }
 "var tmrR = setTimeout(tmr(3), 3000);"
-"var p = "".eJwliksKgDAMBe-SZZF272WkhvhB08prK4h4dyPuZoa5qWGlnsIoiReN2DyXkzqKmIt1I8gkEPyy5FKHFFVM9WrYPWf9dmY5qkUXHD0vsMwbBg:1p9ohQ:NBsYksgSdV94e-oZJo4YEsfyyGM"", as = ""http://myurl.com/mtm/async/"";"
+"var p = "".eJwliksKgDAMBe-SZZF272WkhvhB08prK4h4dyPuZoa5qWGlnsIoiReN2DyXkzqKmIt1I8gkEPyy5FKHFFVM9WrYPWf9dmY5qkUXHD0vsMwbBg:1p9orc:U6_1sZEgBlPvcnosR5b39Wes2i0"", as = ""http://myurl.com/mtm/async/"";"
 function d(n) {
 "window.top.location.href = ""http://www42.myurl.com/"" + n;"
 }
