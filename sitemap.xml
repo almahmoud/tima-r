@@ -49,7 +49,43 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/annotate_non_ms1.html</loc>
   </url>
   <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/clean_bio.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/clean_chemo.html</loc>
+  </url>
+  <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/complement_metadata.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/create_dir.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/decorate_bio.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/decorate_chemo.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/decorate_ms1.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/dist_get.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/dist_groups.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/dot-ms2_matching_peaks.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/dot-ms2_matching_peaks_fraction.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/export_output.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/export_params.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/export_spectra.html</loc>
@@ -70,6 +106,12 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/fake_no_rt.html</loc>
   </url>
   <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/form_adducts_neg.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/form_adducts_pos.html</loc>
+  </url>
+  <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/get_benchmark.html</loc>
   </url>
   <url>
@@ -85,6 +127,9 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/get_last_version_from_zenodo.html</loc>
   </url>
   <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/get_params.html</loc>
+  </url>
+  <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/harmonize_spectra.html</loc>
   </url>
   <url>
@@ -92,6 +137,18 @@
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/log_debug.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/parse_cli_params.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/parse_yaml_params.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/parse_yaml_paths.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_adducts.html</loc>
@@ -130,10 +187,37 @@
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/prepare_taxa.html</loc>
   </url>
   <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/pretreat_names_sirius.html</loc>
+  </url>
+  <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/process_annotations.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/process_spectra.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/read_clusters.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/read_edges.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/read_features.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/read_metadata.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/read_nap.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/read_results.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/replace_gnps_job_id.html</loc>
+  </url>
+  <url>
+    <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/treat_names_sirius.html</loc>
   </url>
   <url>
     <loc>https://taxonomicallyinformedannotation.github.io/tima-r/reference/weight_bio.html</loc>

