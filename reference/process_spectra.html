@@ -72,7 +72,7 @@
 <span>  npeaks <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">peaks</span><span class="op">$</span><span class="va">absolute</span>,</span>
 <span>  rpeaks <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">peaks</span><span class="op">$</span><span class="va">ratio</span>,</span>
 <span>  condition <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">ms</span><span class="op">$</span><span class="va">condition</span>,</span>
-<span>  quickmode <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">quickmode</span>,</span>
+<span>  qutoff <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">qutoff</span>,</span>
 <span>  parallel <span class="op">=</span> <span class="va">params</span><span class="op">$</span><span class="va">parallel</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -119,8 +119,8 @@
 <dd><p>Condition to be fulfilled. Either 'OR' or 'AND' (mass and peaks minima).</p></dd>
 
 
-<dt>quickmode</dt>
-<dd><p>Boolean. Quick mode goes faster but does not output matched peaks and ratios.</p></dd>
+<dt>qutoff</dt>
+<dd><p>Intensity under which ms2 fragments will be removed previous to comparison.</p></dd>
 
 
 <dt>parallel</dt>
@@ -132,7 +132,7 @@
     <p>It takes two files as input. A query file that will be matched against a library file.
 Multiple comparison distances are available
 ('gnps', 'navdist','ndotproduct','neuclidean', 'nspectraangle' (See MsCoreUtils for details)).
-Number of matched peaks and their ratio are also available if using 'quickmode=FALSE'.
+Number of matched peaks and their ratio are also available.
 Parallel processing is also made available.</p>
     </div>
 
