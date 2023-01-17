@@ -109,79 +109,129 @@ successfully, this should be a piece of cake, you deserve it!</p>
 <code>config/params/process_annotations.yaml</code>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span>file <span class="op">=</span> <span class="st">"inst/scripts/process_annotations.R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 2023-01-17 08:12:40 This script performs <span style="color: #00BB00;">taxonomically informed scoring</span> preceded by <span style="color: #0000BB;">MS1 annotation</span> and followed by <span style="color: #BBBB00;">chemical consistency informed scoring</span> </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:12:40 Authors:  <span style="color: #00BB00;">AR</span> , <span style="color: #0000BB;">PMA</span> </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:05 This script performs <span style="color: #00BB00;">taxonomically informed scoring</span> preceded by <span style="color: #0000BB;">MS1 annotation</span> and followed by <span style="color: #BBBB00;">chemical consistency informed scoring</span> </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:05 Authors:  <span style="color: #00BB00;">AR</span> , <span style="color: #0000BB;">PMA</span> </span></span>
 <span><span class="co">#&gt;  </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:12:40 Contributors: ... </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:12:40 Loading paths </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:12:40 Loading yaml parameters </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:12:40 Loading command line arguments </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:12:40 ... files ... </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:12:40 ... annotations </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:12:41 ... metadata_table_biological_annotation </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:12:41 ... edges table </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:12:41 ... structure-organism pairs table </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:13:04 ... single charge adducts table </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:13:04 ... adducts masses for in source dimers and multicharged </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:13:04 ... neutral lossses </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:13:04 ... exact masses for MS1 annotation </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:13:05 performing MS1 annotation </span></span>
-<span><span class="co">#&gt; filtering desired adducts and adding mz tolerance </span></span>
-<span><span class="co">#&gt; setting to data.table format for faster performance </span></span>
-<span><span class="co">#&gt; adding rt tolerance ... </span></span>
-<span><span class="co">#&gt; ... on the other side (without tolerance) </span></span>
-<span><span class="co">#&gt; setting joining keys </span></span>
-<span><span class="co">#&gt; joining within given rt tolerance </span></span>
-<span><span class="co">#&gt; adding delta mz tolerance for single charge adducts </span></span>
-<span><span class="co">#&gt; calculating delta mz for single charge adducts </span></span>
-<span><span class="co">#&gt; setting joining keys </span></span>
-<span><span class="co">#&gt; neutral losses </span></span>
-<span><span class="co">#&gt; setting joining keys </span></span>
-<span><span class="co">#&gt; joining within given delta mz tolerance (neutral losses) </span></span>
-<span><span class="co">#&gt; joining within given delta mz tolerance (adducts) </span></span>
-<span><span class="co">#&gt; keeping initial and destination feature </span></span>
-<span><span class="co">#&gt; joining with initial results (adducts) </span></span>
-<span><span class="co">#&gt; joining with initial results (neutral losses) </span></span>
-<span><span class="co">#&gt; setting joining keys </span></span>
-<span><span class="co">#&gt; joining within given mz tolerance and filtering possible single charge adducts only </span></span>
-<span><span class="co">#&gt; cleaning results </span></span>
-<span><span class="co">#&gt; keeping unique adducts per exact mass </span></span>
-<span><span class="co">#&gt; joining exact masses with single charge adducts </span></span>
-<span><span class="co">#&gt; adding adduct mass to get back to [M] </span></span>
-<span><span class="co">#&gt; keeping these ions for dimers and multicharged exploration starting from [M] </span></span>
-<span><span class="co">#&gt; calculating multicharged and in source dimers and adding delta mz tolerance </span></span>
-<span><span class="co">#&gt; setting joining keys </span></span>
-<span><span class="co">#&gt; joining within given rt tolerance </span></span>
-<span><span class="co">#&gt; setting joining keys </span></span>
-<span><span class="co">#&gt; setting joining keys </span></span>
-<span><span class="co">#&gt; joining within given mz tolerance and filtering possible multicharge / dimeric adducts </span></span>
-<span><span class="co">#&gt; formatting initial results </span></span>
-<span><span class="co">#&gt; joining MS2 results, single adducts, neutral losses, and multicharged / dimers and ranking </span></span>
-<span><span class="co">#&gt; adding "notAnnotated" </span></span>
-<span><span class="co">#&gt; MS1 annotation led to </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:05 Contributors: ... </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:05 Loading paths </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:05 Loading yaml parameters </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:05 Loading command line arguments </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:05 ... files ... </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:05 ... annotations </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:05 ... metadata_table_biological_annotation </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:05 ... edges table </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:05 ... structure-organism pairs table </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:24 ... single charge adducts table </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:24 ... adducts masses for in source dimers and multicharged </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:25 ... neutral lossses </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:25 ... exact masses for MS1 annotation </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:26 performing MS1 annotation </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:26 filtering desired adducts and adding mz tolerance </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 setting to data.table format for faster performance </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 adding rt tolerance ... </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 ... on the other side (without tolerance) </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 setting joining keys </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 joining within given rt tolerance </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 adding delta mz tolerance for single charge adducts </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 calculating delta mz for single charge adducts </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 setting joining keys </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 neutral losses </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 setting joining keys </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 joining within given delta mz tolerance (neutral losses) </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 joining within given delta mz tolerance (adducts) </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 keeping initial and destination feature </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 joining with initial results (adducts) </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 joining with initial results (neutral losses) </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 setting joining keys </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:27 joining within given mz tolerance and filtering possible single charge adducts only </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:32 cleaning results </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:32 keeping unique adducts per exact mass </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:33 joining exact masses with single charge adducts </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:35 adding adduct mass to get back to [M] </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:35 keeping these ions for dimers and multicharged exploration starting from [M] </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:35 calculating multicharged and in source dimers and adding delta mz tolerance </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:36 setting joining keys </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:36 joining within given rt tolerance </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:39 setting joining keys </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:41 setting joining keys </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:41 joining within given mz tolerance and filtering possible multicharge / dimeric adducts </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:45 formatting initial results </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:45 joining MS2 results, single adducts, neutral losses, and multicharged / dimers and ranking </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:47 adding "notAnnotated" </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:48 MS1 annotation led to </span></span>
 <span><span class="co">#&gt;  <span style="color: #00BB00;">1835918</span> <span style="color: #00BB00;">annotations</span> , on </span></span>
 <span><span class="co">#&gt;  <span style="color: #0000BB;">7897</span> <span style="color: #0000BB;">features</span> , of which </span></span>
 <span><span class="co">#&gt;  <span style="color: #BBBB00;">7876</span> were <span style="color: #BBBB00;">not previously annotated. </span></span></span>
-<span><span class="co"><span style="color: #BBBB00;">#&gt; </span>2023-01-17 08:13:37 adding biological organism metadata </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:13:39 performing taxonomically informed scoring </span></span>
-<span><span class="co">#&gt; normalizing initial score </span></span>
-<span><span class="co">#&gt; selecting DB columns </span></span>
-<span><span class="co">#&gt; keeping distinct candidates per taxonomical rank </span></span>
-<span><span class="co">#&gt; calculating biological scores ... </span></span>
-<span><span class="co">#&gt; ... domain </span></span>
-<span><span class="co">#&gt; ... kingdom </span></span>
-<span><span class="co">#&gt; ... phylum </span></span>
-<span><span class="co">#&gt; ... class </span></span>
-<span><span class="co">#&gt; ... order </span></span>
-<span><span class="co">#&gt; ... family </span></span>
-<span><span class="co">#&gt; ... tribe </span></span>
-<span><span class="co">#&gt; ... genus </span></span>
-<span><span class="co">#&gt; ... species </span></span>
-<span><span class="co">#&gt; ... varietas </span></span>
-<span><span class="co">#&gt; keeping best biological score only </span></span>
-<span><span class="co">#&gt; joining with initial results </span></span>
-<span><span class="co">#&gt; adding "notClassified" </span></span>
-<span><span class="co">#&gt; taxonomically informed scoring led to </span></span>
+<span><span class="co"><span style="color: #BBBB00;">#&gt; </span> </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:51 adding biological organism metadata </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:52 performing taxonomically informed scoring </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:52 normalizing initial score </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:53 selecting DB columns </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:53 keeping distinct candidates per taxonomical rank </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:55 calculating biological scores ... </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:55 ... domain </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:51:57 ... kingdom </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:00 ... phylum </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:03 ... class </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:07 ... order </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:11 ... family </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:14 ... tribe </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:16 ... genus </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:20 ... species </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:25 ... varietas </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:26 keeping best biological score only </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:35 joining with initial results </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:42 adding "notClassified" </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:44 taxonomically informed scoring led to </span></span>
 <span><span class="co">#&gt;  <span style="color: #555555;">1267278</span> annotations reranked at the <span style="color: #555555;">kingdom</span> level, </span></span>
 <span><span class="co">#&gt;  <span style="color: #BBBBBB;">1254756</span> annotations reranked at the <span style="color: #BBBBBB;">phylum</span> level, </span></span>
 <span><span class="co">#&gt;  <span style="color: #00BBBB;">969542</span> annotations reranked at the <span style="color: #00BBBB;">class</span> level, </span></span>
@@ -190,47 +240,76 @@ successfully, this should be a piece of cake, you deserve it!</p>
 <span><span class="co">#&gt;  <span style="color: #BBBB00;">13861</span> annotations reranked at the <span style="color: #BBBB00;">genus</span> level, </span></span>
 <span><span class="co">#&gt;  <span style="color: #00BB00;">3895</span> annotations reranked at the <span style="color: #00BB00;">species</span> level, </span></span>
 <span><span class="co">#&gt;  and <span style="color: #BB0000;">0</span> annotations reranked at the <span style="color: #BB0000;">variety</span> level. </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:14:47 cleaning taxonomically informed results and preparing for chemically informed scoring </span></span>
-<span><span class="co">#&gt; keeping only MS1 candidates with minimum </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:48 cleaning taxonomically informed results and preparing for chemically informed scoring </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:48 keeping only MS1 candidates with minimum </span></span>
 <span><span class="co">#&gt;  0.5  biological score </span></span>
-<span><span class="co">#&gt; erasing other MS1 candidates </span></span>
-<span><span class="co">#&gt; adding "notAnnotated" </span></span>
-<span><span class="co">#&gt; adding "notClassified" </span></span>
-<span><span class="co">#&gt; keeping clusters with at least 3 features  </span></span>
-<span><span class="co">#&gt; keeping clusters with less than 3 features </span></span>
-<span><span class="co">#&gt; calculating chemical consistency features with at least 2 neighbors ... </span></span>
-<span><span class="co">#&gt; ... among edges ... </span></span>
-<span><span class="co">#&gt; ... at the pathway level </span></span>
-<span><span class="co">#&gt; ... at the superclass level </span></span>
-<span><span class="co">#&gt; ... at the class level </span></span>
-<span><span class="co">#&gt; joining all except -1 together </span></span>
-<span><span class="co">#&gt; adding dummy consistency for features with less than 2 neighbors </span></span>
-<span><span class="co">#&gt; binding results together </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:14:57 performing chemically informed scoring </span></span>
-<span><span class="co">#&gt; calculating chemical score ... </span></span>
-<span><span class="co">#&gt; ... adding metadata </span></span>
-<span><span class="co">#&gt; ... pathway </span></span>
-<span><span class="co">#&gt; ... superclass </span></span>
-<span><span class="co">#&gt; ... class </span></span>
-<span><span class="co">#&gt; ... outputting best score </span></span>
-<span><span class="co">#&gt; ... joining </span></span>
-<span><span class="co">#&gt; ... cleaning </span></span>
-<span><span class="co">#&gt; chemically informed scoring led to </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:48 erasing other MS1 candidates </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:51 adding "notAnnotated" </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:51 adding "notClassified" </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:51 keeping clusters with at least 3 features  </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:51 keeping clusters with less than 3 features </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:51 calculating chemical consistency features with at least 2 neighbors ... </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:51 ... among edges ... </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:52 ... at the pathway level </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:52 ... at the superclass level </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:54 ... at the class level </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:56 joining all except -1 together </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:56 adding dummy consistency for features with less than 2 neighbors </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:56 binding results together </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:56 performing chemically informed scoring </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:56 calculating chemical score ... </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:56 ... adding metadata </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:56 ... pathway </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:58 ... superclass </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:58 ... class </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:58 ... outputting best score </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:58 ... joining </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:52:58 ... cleaning </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:53:05 chemically informed scoring led to </span></span>
 <span><span class="co">#&gt;  <span style="color: #0000BB;">31361</span> annotations reranked at the <span style="color: #0000BB;">pathway</span> level, </span></span>
 <span><span class="co">#&gt;  <span style="color: #BBBB00;">20879</span> annotations reranked at the <span style="color: #BBBB00;">superclass</span> level, and </span></span>
 <span><span class="co">#&gt;  <span style="color: #00BB00;">4981</span> annotations reranked at the <span style="color: #00BB00;">class</span> level. </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:15:07 cleaning for cytoscape export </span></span>
-<span><span class="co">#&gt; filtering top  3  candidates and keeping only MS1 candidates with minimum </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:53:05 cleaning for cytoscape export </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:53:05 filtering top  3  candidates and keeping only MS1 candidates with minimum </span></span>
 <span><span class="co">#&gt;  0.5  biological score or </span></span>
 <span><span class="co">#&gt;  0.666 chemical score </span></span>
-<span><span class="co">#&gt; adding initial metadata (RT, etc.) and simplifying columns </span></span>
-<span><span class="co">#&gt; adding structures metadata </span></span>
-<span><span class="co">#&gt; selecting columns for cytoscape output </span></span>
-<span><span class="co">#&gt; summarizing results </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:15:38 Exporting ... </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:15:38 ... path to used parameters is <span style="color: #00BB00;">data/processed/230117_081538</span> </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:15:38 ... path to export is <span style="color: #00BB00;">data/processed/230117_081538/FinalResults.tsv</span> </span></span>
-<span><span class="co">#&gt; 2023-01-17 08:15:38 Script finished in <span style="color: #00BB00;">2.966961 mins</span></span></span></code></pre></div>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:53:06 adding initial metadata (RT, etc.) and simplifying columns </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:53:16 adding structures metadata </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:53:17 selecting columns for cytoscape output </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:53:17 summarizing results </span></span>
+<span><span class="co">#&gt;  </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:53:32 Exporting ... </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:53:32 ... path to used parameters is <span style="color: #00BB00;">data/processed/230117_085332</span> </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:53:32 ... path to export is <span style="color: #00BB00;">data/processed/230117_085332/FinalResults.tsv</span> </span></span>
+<span><span class="co">#&gt; 2023-01-17 08:53:32 Script finished in <span style="color: #00BB00;">2.447567 mins</span></span></span></code></pre></div>
 <p>The final exported file is formatted in order to be easily imported
 in <a href="https://cytoscape.org/" class="external-link">Cytoscape</a> to further explore
 your data!</p>
